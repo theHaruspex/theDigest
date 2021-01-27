@@ -1,0 +1,408 @@
+<h1>
+<meta charset="utf-8">
+ A Quantitative Introduction to Successful Blogging
+</h1>
+<h2>
+</h2>
+<i>
+ Published October 27, 2015 on Put A Number On It!.
+</i>
+<div class="entry-content">
+ <p>
+  Ladies, gentlemen, and cats walking randomly on keyboards: welcome to Putanumonit, the blog that puts a number on it. I have just written a long post detailing the philosophy and goals of this blog. This is not that post. Between us, philosophy just isn’t the most exciting subject for our first date. Let us instead grab a bottle of the second cheapest wine on the menu and jump straight into the claptrap that this blog will one day be famous for: answering questions of low consequence using numbers of low soundness.
+ </p>
+ <hr/>
+ <h4>
+  Question #1 – Is putanumonit.com a good domain name?
+ </h4>
+ <p>
+  What’s in a (domain) name? It’s intuitively obvious that shorter names made up of common words and a
+  <strong>
+   .com
+  </strong>
+  <span style="color:#008000;">
+   <a href="https://en.wikipedia.org/wiki/Top-level_domain" style="color:#008000;">
+    TLD
+    <span style="color:#000000;">
+     a
+    </span>
+   </a>
+   <span style="color:#000000;">
+    re
+   </span>
+  </span>
+  <span style="color:#000000;">
+  </span>
+  better than whtthehlllisthiscrp.info, but this blog isn’t about obvious intuitions. Let’s put a number on it!
+ </p>
+ <p>
+  MOZ has a ranked list of the
+  <span style="color:#008000;">
+   <a href="https://moz.com/top500" style="color:#008000;">
+    top 500 domain names
+   </a>
+   <span style="color:#000000;">
+    , going from
+    <strong>
+     facebook.com
+    </strong>
+    ,
+    <strong>
+     twitter.com
+    </strong>
+    and
+    <strong>
+     google.com
+    </strong>
+    to
+    <strong>
+     123-reg.co.uk
+    </strong>
+    and
+    <strong>
+     pcworld.com
+    </strong>
+    . Let’s see how the rank (lower is better) depends on the domain name length (between the www. and the .xyz):
+   </span>
+  </span>
+ </p>
+ <p>
+  <a href="https://putanumonit.files.wordpress.com/2015/10/top500_rank_len_scatter.png">
+   <img alt="top500_rank_len_scatter" class="alignleft size-large wp-image-27" data-attachment-id="27" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="top500_rank_len_scatter" data-large-file="https://putanumonit.files.wordpress.com/2015/10/top500_rank_len_scatter.png?w=742" data-medium-file="https://putanumonit.files.wordpress.com/2015/10/top500_rank_len_scatter.png?w=300" data-orig-file="https://putanumonit.files.wordpress.com/2015/10/top500_rank_len_scatter.png" data-orig-size="742,593" data-permalink="https://putanumonit.com/2015/10/27/001-intro/top500_rank_len_scatter/" sizes="(max-width: 742px) 100vw, 742px" src="https://putanumonit.files.wordpress.com/2015/10/top500_rank_len_scatter.png?w=900&amp;h=719" srcset="https://putanumonit.files.wordpress.com/2015/10/top500_rank_len_scatter.png 742w, https://putanumonit.files.wordpress.com/2015/10/top500_rank_len_scatter.png?w=150&amp;h=120 150w, https://putanumonit.files.wordpress.com/2015/10/top500_rank_len_scatter.png?w=300&amp;h=240 300w"/>
+  </a>
+ </p>
+ <p>
+  We see a very slight upward trend in rank as length increases, but at least it’s in the right direction. There is one interesting thing that pops out: there are quite a few domain names of more than 11 characters, but not a single one is ranked higher than 59th (
+  <strong>
+   creativecommons.org
+  </strong>
+  ). Here’s another visualization of the same data:
+ </p>
+ <p>
+  <a href="https://putanumonit.files.wordpress.com/2015/10/rank_falls.png">
+   <img alt="rank_falls" class="alignleft size-large wp-image-26" data-attachment-id="26" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="rank_falls" data-large-file="https://putanumonit.files.wordpress.com/2015/10/rank_falls.png?w=742" data-medium-file="https://putanumonit.files.wordpress.com/2015/10/rank_falls.png?w=300" data-orig-file="https://putanumonit.files.wordpress.com/2015/10/rank_falls.png" data-orig-size="742,593" data-permalink="https://putanumonit.com/2015/10/27/001-intro/rank_falls/" sizes="(max-width: 742px) 100vw, 742px" src="https://putanumonit.files.wordpress.com/2015/10/rank_falls.png?w=900&amp;h=719" srcset="https://putanumonit.files.wordpress.com/2015/10/rank_falls.png 742w, https://putanumonit.files.wordpress.com/2015/10/rank_falls.png?w=150&amp;h=120 150w, https://putanumonit.files.wordpress.com/2015/10/rank_falls.png?w=300&amp;h=240 300w"/>
+  </a>
+ </p>
+ <p>
+  The height of the bar at a number N is the difference between the average ranks of domains longer than N and domains with up to N characters. Going from 2 to 5 letters only helps you, and 6-9 appears to be the sweet spot (facebook =8, twitter=7, google=6). The greatest difference is between names with up to 11 and over 11 characters: 58 ranking spots! The 12th letter costs 20 spots by itself.
+ </p>
+ <p>
+  A look at the TLDs confirms our intuitions as well:
+  <strong>
+   .com
+  </strong>
+  is 10 times as popular as any other TLD, and correlates with a very slight (15 spots) increase in rank.
+ </p>
+ <p>
+  Focusing on blogs exclusively, this snapshot of Technoratis’
+  <span style="color:#008000;">
+   <a href="http://www.seocial.com/technorati-blog-directory-deleted-may-29/" rel="noopener" style="color:#008000;" target="_blank">
+    top 100 blogs
+   </a>
+  </span>
+  of 2014 tells a similar story. The median domain length is exactly 11, and
+  <strong>
+   .com
+  </strong>
+  s rule 88 of the top 100. Perhaps the success of all those blogs is due to top notch content, professional teams and affiliations with media empires rather than a good domain name, but who knows? Until I get the content, the team and the empire, it makes sense to launch at a
+  <strong>
+   .com
+  </strong>
+  domain comprising no more than 11 characters: putanumonit.
+ </p>
+ <hr/>
+ <h4>
+  Question #2 – Is that result about 11 letters statistically significant?
+ </h4>
+ <p>
+  If you
+  <span style="color:#008000;">
+   <a href="http://stattrek.com/hypothesis-test/hypothesis-testing.aspx?Tutorial=Stat" style="color:#008000;">
+    test the hypothesis
+   </a>
+  </span>
+  <em>
+   “Domains with 12 or more letters are lower ranked”
+  </em>
+  by itself, you get a p-value of ~1% and can conclude that it’s statistically significant. That would also be a
+  <span style="color:#008000;">
+   <a href="https://en.wikipedia.org/wiki/Lies,_damned_lies,_and_statistics" style="color:#008000;">
+    lie and a damned lie
+   </a>
+   <span style="color:#000000;">
+    for a number of reasons I’ll get to in later posts
+   </span>
+  </span>
+  . Remember kids: p-values are like drugs. They’re enticing, but they’re not your friends.
+ </p>
+ <p>
+  Significance aside, the chart above still looks cool and has non-zero educational value. Putanumonit will vary in rigor level from
+  <em>
+   “here’s a number I found Googling, let’s tell a story about it!”
+  </em>
+  (rigor minimis) to
+  <em>
+   “here’s a huge dataset, let’s apply quadratic discriminant analysis to it!”
+  </em>
+  (rigor mortis)
+  <em>
+   .
+  </em>
+  The number of bad puns I use is a good measure of the seriousness of each post.
+ </p>
+ <hr/>
+ <h4>
+  Question #3 – With the domain choice out of the way, let’s look at content. What will this blog actually be about?
+ </h4>
+ <p>
+  My favorite site that puts numbers on things is
+  <span style="color:#008000;">
+   <a href="http://www.fivethirtyeight.com" rel="noopener" style="color:#008000;" target="_blank">
+    fivethirtyeight.com
+   </a>
+  </span>
+  , which publishes articles in 5 main categories: politics, economics, science, life and sports. Their site do
+  <span style="color:#000000;">
+   esn’t have a categorized archive, but we can use a trick to estimate the number of posts by category: each category tab lists the last 10 articles written in it. By subtracting the date of the 10
+   <sup>
+    th
+   </sup>
+   article from today’s date we know the average
+   <strong>
+    time
+   </strong>
+   between publications, which is the inverse of the publication
+   <strong>
+    rate
+   </strong>
+   :
+  </span>
+ </p>
+ <p>
+  <span style="color:#000000;">
+   Politics: 10 articles in 9 days, 1.11 per day or 19% of total articles.
+  </span>
+ </p>
+ <p>
+  <span style="color:#000000;">
+   Economics: 10 articles in 21 days, 0.48 per day or 8% of total articles.
+  </span>
+ </p>
+ <p>
+  <span style="color:#000000;">
+   Science: 10 articles in 35 days, 0.29 per day or 5% of total articles.
+  </span>
+ </p>
+ <p>
+  <span style="color:#000000;">
+   Life: 10 articles in 7 days, 1.43 per day or 25% of total articles.
+  </span>
+ </p>
+ <p>
+  <span style="color:#000000;">
+   Sports: 10 articles in 4 days, 2.5 per day or 43% of total articles.
+  </span>
+ </p>
+ <p>
+  <span style="color:#000000;">
+   Politics is a strong category for fivethirtyeight (which is named after the number of US representatives) and the subject area that launched Nate Silver into geeky stardom. Unfortunately, I am not overly interested in it and am currently not eligible to vote in any country on the globe. I’ll write about
+   <em>
+    meta
+   </em>
+   politics occasionally, including an analysis of the
+   <span style="color:#3366ff;">
+    downsides of voting
+   </span>
+   and what you can do instead on
+   <span style="color:#3366ff;">
+    election day
+   </span>
+   to achieve the same impact on democracy.
+  </span>
+ </p>
+ <p>
+  <span style="color:#000000;">
+   No one cares about economics and I slept through macroecon class, so this category may be sparse.
+  </span>
+ </p>
+ <p>
+  <span style="color:#000000;">
+   I do like science, but I don’t really have any original research to publish. I’ll occasionally
+   <span style="color:#3366ff;">
+    critique the statistical “analysis”
+   </span>
+   of some research papers that I come across, there’s one very popular TED talk in particular that I have my sights on.
+  </span>
+ </p>
+ <p>
+  <span style="color:#000000;">
+   Three quarters (or 403.5/538) of fivethirtyeight is not about life! I wonder what it’s about, then. I have a few posts planned on analysis of romance, from
+   <span style="color:#3366ff;">
+    presenting a persona
+   </span>
+   (or online profile) to
+   <span style="color:#3366ff;">
+    choosing a long term partner
+   </span>
+   . I also have another writeup on the estimated cost and importance of
+   <span style="color:#3366ff;">
+    providing every person in Africa with access to clear water
+   </span>
+   . If you disagree that quantitative analysis can teach people about dating or about helping the needy, maybe this blog isn’t for you.
+  </span>
+ </p>
+ <p>
+  <span style="color:#000000;">
+   Finally, sports is th
+  </span>
+  e #1 topic on fivethirtyeight! Who knew that so many people are into both sports and math? I only watche
+  <span style="color:#000000;">
+   d
+   <span style="color:#008000;">
+    <a href="http://www.imdb.com/title/tt1210166/" rel="noopener" style="color:#008000;" target="_blank">
+     Moneyball
+    </a>
+   </span>
+   for Brad Pitt’s dreamy eyes. Kidding aside, this is right in my wheelhouse. S
+  </span>
+  ports posts in the pipeline:
+  <span style="color:#3366ff;">
+   why some countries are good at soccer and India isn’t
+  </span>
+  ,
+  <span style="color:#3366ff;">
+   how to optimize betting auctions like fantasy
+  </span>
+  , why you should ignore and/or reverse most statistics based
+  <span style="color:#3366ff;">
+   advise you hear about picking NFL games
+  </span>
+  and much more.
+ </p>
+ <hr/>
+ <h4>
+  Question #4 – Are you trying to imitate fivethirtyeight.com?
+ </h4>
+ <p>
+  I’m mostly hoping to become 1/538
+  <sup>
+   th
+  </sup>
+  as good. In seriousness, my approach is quite different. Fivethirtyeight focuses on journalism: collecting and presenting a lot of
+  <strong>
+   information
+  </strong>
+  , with the analysis and narrative attached. I will focus on sharing (and discovering for myself) the art of understanding the world with numbers, hopefully inspiring my readers to apply the
+  <strong>
+   approaches
+  </strong>
+  I use in their own contexts.
+ </p>
+ <hr/>
+ <p>
+  Next post: my overarching
+  <strong>
+   <span style="color:#008000;">
+    <a href="https://putanumonit.com/2015/11/03/002-credo/" style="color:#008000;">
+     philosophy and approach
+    </a>
+   </span>
+  </strong>
+  of putting numbers on things.
+ </p>
+ <div class="sharedaddy sd-like-enabled sd-sharing-enabled" id="jp-post-flair">
+  <div class="sharedaddy sd-sharing-enabled">
+   <div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing">
+    <h3 class="sd-title">
+     Share this:
+    </h3>
+    <div class="sd-content">
+     <ul>
+      <li class="share-facebook">
+       <a class="share-facebook sd-button share-icon no-text" data-shared="sharing-facebook-2" href="https://putanumonit.com/2015/10/27/001-intro/?share=facebook" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Facebook">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Facebook (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-twitter">
+       <a class="share-twitter sd-button share-icon no-text" data-shared="sharing-twitter-2" href="https://putanumonit.com/2015/10/27/001-intro/?share=twitter" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Twitter">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Twitter (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-pocket">
+       <a class="share-pocket sd-button share-icon no-text" data-shared="" href="https://putanumonit.com/2015/10/27/001-intro/?share=pocket" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Pocket">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Pocket (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-reddit">
+       <a class="share-reddit sd-button share-icon no-text" data-shared="" href="https://putanumonit.com/2015/10/27/001-intro/?share=reddit" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Reddit">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Reddit (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-tumblr">
+       <a class="share-tumblr sd-button share-icon no-text" data-shared="" href="https://putanumonit.com/2015/10/27/001-intro/?share=tumblr" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Tumblr">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Tumblr (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-email">
+       <a class="share-email sd-button share-icon no-text" data-shared="" href="https://putanumonit.com/2015/10/27/001-intro/?share=email" rel="nofollow noopener noreferrer" target="_blank" title="Click to email this to a friend">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to email this to a friend (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-end">
+      </li>
+     </ul>
+    </div>
+   </div>
+  </div>
+  <div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded" data-name="like-post-frame-101823629-2-6010a970cad3e" data-src="//widgets.wp.com/likes/index.html?ver=20200826#blog_id=101823629&amp;post_id=2&amp;origin=putanumonit.wordpress.com&amp;obj_id=101823629-2-6010a970cad3e&amp;domain=putanumonit.com" id="like-post-wrapper-101823629-2-6010a970cad3e">
+   <h3 class="sd-title">
+    Like this:
+   </h3>
+   <div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px;">
+    <span class="button">
+     <span>
+      Like
+     </span>
+    </span>
+    <span class="loading">
+     Loading...
+    </span>
+   </div>
+   <span class="sd-text-color">
+   </span>
+   <a class="sd-link-color">
+   </a>
+  </div>
+  <div class="jp-relatedposts" id="jp-relatedposts">
+   <h3 class="jp-relatedposts-headline">
+    <em>
+     Related
+    </em>
+   </h3>
+  </div>
+ </div>
+</div>

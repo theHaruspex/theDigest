@@ -1,0 +1,259 @@
+<h1>
+<meta charset="utf-8">
+ Making Markets
+</h1>
+<h2>
+</h2>
+<i>
+ Published November 26, 2019 on Put A Number On It!.
+</i>
+<div class="entry-content">
+ <p>
+  This is a guest post by
+  <a href="https://www.lesswrong.com/users/kythe" rel="noopener" target="_blank">
+   my friend Kythe
+  </a>
+  , a programmer who works in finance and knows more than most about both.
+ </p>
+ <hr/>
+ <p>
+  <span style="font-weight:400;">
+   When I interned at a trading company, one thing I found interesting is that the way they communicated about probabilities and uncertainty was very different from the probability estimates and confidence intervals I had heard endorsed outside of the finance world. Instead, they gave two sided “markets” stating the prices they were willing to buy or sell some implicit contract at.
+  </span>
+ </p>
+ <p>
+  <span style="font-weight:400;">
+   The way this works for a binary proposition like “will this coin flip come up heads?” is to say that you’d be willing to buy a contract that pays out $100 if the proposition resolves true for $40, and sell such a contract for $60. This is not just a probability estimate but an invitation to bet; if anybody else present wants to trade with you at those prices they can do so. As shorthand, you’d say that you are “40 at 60” on the coin coming up heads.
+  </span>
+ </p>
+ <p>
+  <span style="font-weight:400;">
+   The cool thing about making a market as opposed to giving a probability estimate is that it communicates an additional dimension of how confident you are in your estimate. That confidence is also grounded in a real life quantity: the thresholds at which the person is willing to stake $100. The fact that stating a market means you’re open for bets incentivizes people to make good estimates they stand behind.
+  </span>
+ </p>
+ <p>
+  <span style="font-weight:400;">
+   How do you decide how wide to make your markets? A good place to start is to think about the bounds as your probability estimates conditional on someone you’re talking to thinking you’re wrong and wanting to bet against you. For some propositions knowing someone wants to bet against you will move your estimates much more than for others. This also depends on who it is that you’re talking to, for example if they’re an expert on the subject and you’re not, or if they’re just better than you at estimating in general. Someone willing to bet you real money that a coin comes up heads
+  </span>
+  <i>
+   <span style="font-weight:400;">
+    is
+   </span>
+  </i>
+  <span style="font-weight:400;">
+   Bayesian evidence for that outcome being more likely, and should revise your own estimate accordingly.
+  </span>
+ </p>
+ <p>
+  <span style="font-weight:400;">
+   In finance this is called “adverse selection”: The idea that people will trade against the side of your markets they think is better for them (and worse for you). If they have better information than you, they’ll end up with the better side of the deal in a zero sum game. The most important question is: how likely are they to have a better estimate than you? This depends on your confidence in your estimate: Is it based on vague general priors, or have you put a lot of effort into looking for all available information and developing a solid understanding? It also depends on your counterparty’s knowledge and skill: Do you know them well enough that you’d know if they happened to be well versed in the topic, and what other advantages might they have? And if you’re making a market to a pool of people, you need to think about the mix of participants and whether you’ll make enough money off the times you win to make up for occasional losses due to adverse selection.
+  </span>
+ </p>
+ <p>
+  <span style="font-weight:400;">
+   Adverse selection isn’t the only factor that determines the width of your market. Counterparty risk is the danger that the other party to the bet doesn’t pay you what they owe, which can add negative expectancy to bets. I think people underrate this risk when betting because they think “this person seems trustworthy and wouldn’t outright refuse to pay me”, but forget about outcomes like both of you forgetting about the bet if you win when you wouldn’t have forgotten to pay if you lost. Or you might make a bet with somebody who seems trustworthy, but then you don’t get their name and never see each other again. A maximally trustworthy counterparty will make absolutely sure to pay what they owe immediately and never forget, but for everyone short of that we should account for that last little bit of risk.
+  </span>
+ </p>
+ <p>
+  <span style="font-weight:400;">
+   Other factors to think about include the fact that you may not be “risk neutral”, especially for larger bets. For example, losing all your money would probably make your life worse more than doubling your money would make it better. And if a bet will resolve far in the future, not only do you have more counterparty risk, but your money can be locked up for a long time. You may want to structure it so that money only changes hands when resolved, so that you don’t lose out on interest you could have earned while waiting for resolution.
+  </span>
+ </p>
+ <p>
+  <span style="font-weight:400;">
+   Let’s look at some examples of what I’d think about when making markets on some propositions where my prior probability estimate is 50%:
+  </span>
+ </p>
+ <ul>
+  <li style="font-weight:400;">
+   <span style="font-weight:400;">
+    Will a
+   </span>
+   <a href="http://random.org/">
+    <span style="font-weight:400;">
+     random.org
+    </span>
+   </a>
+   <span style="font-weight:400;">
+    coin flip come up heads?: Center my market around 50% and widen a bit based on counterparty risk and my own risk tolerance.
+   </span>
+  </li>
+  <li style="font-weight:400;">
+   <span style="font-weight:400;">
+    Will a coin flip come up heads?: Mostly the same, except at larger sizes I’d start to worry about sleight of hand and unfair coins.
+   </span>
+  </li>
+  <li style="font-weight:400;">
+   <span style="font-weight:400;">
+    Is the 10th digit of pi even?: I actually know 10 digits but haven’t counted, and somebody easily might count faster than me, so start out “0 at 100”, count, then offer a tight market around my result.
+   </span>
+  </li>
+  <li style="font-weight:400;">
+   <span style="font-weight:400;">
+    Is the 12,345th digit of pi even?: Similar to my market on a coin flip, except if my counterparty is allowed to Google before deciding to take a bet, and maybe a tiny bit wider regardless in case there’s a math fact I don’t know about or my counterparty happens to memorize all somewhat salient digits of pi.
+   </span>
+  </li>
+  <li style="font-weight:400;">
+   <span style="font-weight:400;">
+    Does Estonia’s head of state have an even number of letters in their full name?: My counterparty may happen to know about Estonian politics, and this becomes increasingly likely if I know they’re European, and if I know they’re Estonian I’m all the way out to “0 at 100”.
+   </span>
+  </li>
+ </ul>
+ <p>
+  <span style="font-weight:400;">
+   Making markets doesn’t only work on binary propositions, it also works on quantities. For quantities you quote a market as well as a conversion factor for the contract’s pay-out, for example “I’m 8 at 30 for the number of people who show up to my talk, $2 per person”. That would mean I’m willing to buy a contract that pays out $2 for everyone who comes to my talk for $16 (8 people times 2 dollars/person) and sell such a contract for $60 (30 times 2). If I sold such a contract, and then 34 people came to my talk, I’d need to pay out $8 on net.
+  </span>
+ </p>
+ <p>
+  <span style="font-weight:400;">
+   However this kind of contract has unbounded risk, which is something to worry about. For example if I was making a market on the number of protons in the sun, I could easily do my estimation wrong and be off by orders of magnitude, then be on the hook for billions of dollars. In these kinds of cases you can specify custom contracts with bounded risk, for example the ends of your market could be the thresholds at which you’d make an even odds bet on which side the true value is.
+  </span>
+ </p>
+ <p>
+  <span style="font-weight:400;">
+   Now you may ask, “but why would I make markets on a quantity when I can just use say a 90% confidence interval?” Confidence intervals have advantages like the width not depending on who’s part of the conversation. However they don’t have the built in calibration mechanism and stakes that making a market has. They also don’t work well on binary propositions like markets do. “What’s my 90% confidence interval for the probability that a coin flip comes up heads?” is not really a well-formed question in a Bayesian framework.
+  </span>
+ </p>
+ <p>
+  <span style="font-weight:400;">
+   I think making markets is a great way to both communicate an additional dimension of confidence in your estimates that’s grounded in understandable factors, while encouraging people to make estimates with care. When I first started estimating probabilities it often felt wrong since I had no idea how calibrated I was or where to even start sometimes, whereas when making markets you can just start very wide and gradually make tighter markets as you get more confident in your skills.
+  </span>
+ </p>
+ <p>
+  <span id="bft" style="font-weight:400;">
+   If someone is struggling to see how they might have a prior probability on everything, you say something like “Well do you believe that the probability of nuclear war today is less than 90%? Yes? Then you do have an estimate.” But if using thresholds is an easier mental motion, perhaps we should use them for stating our beliefs more often
+   <a href="#ft">
+    [1]
+   </a>
+   .
+  </span>
+ </p>
+ <h2>
+  Postscript: Market making on real markets
+ </h2>
+ <p>
+  <span style="font-weight:400;">
+   Note that while making markets on propositions and trading on them is a zero sum activity, aside from the benefit of better estimates and calibration, the real world financial strategy it is based on is positive sum. Market making is a family of trading strategies where you put out offers to both buy and sell something, trying to get an approximately equal amount of trades in either direction, so that you collect the spread between your prices while turning over inventory and not building up a position. The value this provides to people using the market is the ability to trade whenever they want for the sizes they want, at the cost of a reduction in expected value inconsequential for them.
+  </span>
+ </p>
+ <p>
+  <span style="font-weight:400;">
+   Market makers compete with each other on price (spread) for the service of connecting buyers and sellers across time, while facing all the same risks I’ve talked about for betting. Being a profitable market maker involves having an accurate estimate of the fair value of the product, knowing how much risk you’re taking on by holding a product waiting for someone to come along to take the other end of a trade, adjusting your prices quickly when new information becomes available, and selecting pools of counterparties who want your liquidity services rather than wanting to adversely select you on bad prices.
+  </span>
+ </p>
+ <p>
+  <span style="font-weight:400;">
+   Craigslist is an example of a market without many market makers, where if I want to buy or sell something immediately I’m going to get terrible prices. If I want a good price I need to wait on the market for someone to trade with for a potentially long time. Whereas on liquid financial markets, market makers have competed the spreads down to minimal amounts. I’m happy I can invest my savings whenever I want and not worry about whether some retiree happens to want to sell from their investment portfolio right then, and the market makers are happy to collect a very small spread from me and many other retail investors because they know I’m very unlikely to adversely select them.
+  </span>
+ </p>
+ <h2 id="ft">
+  Footnotes
+ </h2>
+ <p>
+  [1] Jacob: Novices in the Bayesian conspiracy often repeat the claim that since probabilities represent states of knowledge, you should be willing to put a probability on any outcome and take a bet on it either way. Most people wisely reject this, knowing intuitively that they would be facing all the risks outlined in this post
+  <a href="http://asofterworld.com/index.php?id=79" rel="noopener" target="_blank">
+   and more
+  </a>
+  . But a Bayesian should be willing to state a market on almost any proposition, and it’s good practice to do so.
+ </p>
+ <p>
+  <a href="#bft">
+   [Back]
+  </a>
+ </p>
+ <div class="sharedaddy sd-like-enabled sd-sharing-enabled" id="jp-post-flair">
+  <div class="sharedaddy sd-sharing-enabled">
+   <div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing">
+    <h3 class="sd-title">
+     Share this:
+    </h3>
+    <div class="sd-content">
+     <ul>
+      <li class="share-facebook">
+       <a class="share-facebook sd-button share-icon no-text" data-shared="sharing-facebook-29845" href="https://putanumonit.com/2019/11/26/making-markets/?share=facebook" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Facebook">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Facebook (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-twitter">
+       <a class="share-twitter sd-button share-icon no-text" data-shared="sharing-twitter-29845" href="https://putanumonit.com/2019/11/26/making-markets/?share=twitter" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Twitter">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Twitter (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-pocket">
+       <a class="share-pocket sd-button share-icon no-text" data-shared="" href="https://putanumonit.com/2019/11/26/making-markets/?share=pocket" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Pocket">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Pocket (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-reddit">
+       <a class="share-reddit sd-button share-icon no-text" data-shared="" href="https://putanumonit.com/2019/11/26/making-markets/?share=reddit" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Reddit">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Reddit (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-tumblr">
+       <a class="share-tumblr sd-button share-icon no-text" data-shared="" href="https://putanumonit.com/2019/11/26/making-markets/?share=tumblr" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Tumblr">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Tumblr (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-email">
+       <a class="share-email sd-button share-icon no-text" data-shared="" href="https://putanumonit.com/2019/11/26/making-markets/?share=email" rel="nofollow noopener noreferrer" target="_blank" title="Click to email this to a friend">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to email this to a friend (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-end">
+      </li>
+     </ul>
+    </div>
+   </div>
+  </div>
+  <div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded" data-name="like-post-frame-101823629-29845-6010a2936dd88" data-src="//widgets.wp.com/likes/index.html?ver=20200826#blog_id=101823629&amp;post_id=29845&amp;origin=putanumonit.wordpress.com&amp;obj_id=101823629-29845-6010a2936dd88&amp;domain=putanumonit.com" id="like-post-wrapper-101823629-29845-6010a2936dd88">
+   <h3 class="sd-title">
+    Like this:
+   </h3>
+   <div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px;">
+    <span class="button">
+     <span>
+      Like
+     </span>
+    </span>
+    <span class="loading">
+     Loading...
+    </span>
+   </div>
+   <span class="sd-text-color">
+   </span>
+   <a class="sd-link-color">
+   </a>
+  </div>
+  <div class="jp-relatedposts" id="jp-relatedposts">
+   <h3 class="jp-relatedposts-headline">
+    <em>
+     Related
+    </em>
+   </h3>
+  </div>
+ </div>
+</div>

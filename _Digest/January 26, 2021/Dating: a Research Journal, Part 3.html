@@ -1,0 +1,764 @@
+<h1>
+<meta charset="utf-8">
+ Dating: a Research Journal, Part 3
+</h1>
+<h2>
+</h2>
+<i>
+ Published February 20, 2016 on Put A Number On It!.
+</i>
+<div class="entry-content">
+ <p>
+  To recap the series so far,
+  <span style="color:#008000;">
+   <a href="https://putanumonit.com/2016/02/03/015-dating_1/" rel="noopener noreferrer" style="color:#008000;" target="_blank">
+    part 1
+   </a>
+  </span>
+  talked about economics (comparative advantage), algorithms (pursuing vs. choosing) and marketing (personalizing your message and standing out from the crowd). The
+  <span style="color:#008000;">
+   <a href="https://putanumonit.com/2016/02/10/017-dating_2/" rel="noopener noreferrer" style="color:#008000;" target="_blank">
+    second part
+   </a>
+  </span>
+  applied simple algebra to “hack” OkCupid’s match percentage. Is there any quantitative theory that I haven’t yet mangled in the pursuit of dating advice?
+ </p>
+ <hr/>
+ <h2>
+  Part 3 – Don’t hate the game
+ </h2>
+ <blockquote>
+  <p>
+   <span style="color:#000080;">
+    “
+   </span>
+   <span style="color:#000080;">
+    Love is a game that two can play and both win by losing their heart.”
+   </span>
+   – Eva Gabor
+  </p>
+ </blockquote>
+ <p>
+  Game theory is a laughable attempt to simplify complex and uncertain human interactions to simple models in which rational actors choose from a limited set of strategies in pursuit of simple, well known payouts. The sparse triumphs of game theory have come from informing straightforward problems like
+  <span style="color:#008000;">
+   <a href="http://www.nti.org/gsn/article/nuclear-deterrence-theorist-wins-nobel-prize/" rel="noopener noreferrer" style="color:#008000;" target="_blank">
+    nuclear disarmament and counter-terrorism
+   </a>
+  </span>
+  . Only a maniac could think to apply game theory to the infinitely more complex problem of texting after a date.
+ </p>
+ <p>
+  We’ll use the simplest
+  <span style="color:#008000;">
+   <a href="https://en.wikibooks.org/wiki/Introduction_to_Game_Theory/Matrix_Notation" rel="noopener noreferrer" style="color:#008000;" target="_blank">
+    matrix form notation
+   </a>
+  </span>
+  of game theory. Our games will have two players:
+  <strong>
+   <span style="color:#993300;">
+    Alice
+   </span>
+  </strong>
+  and
+  <strong>
+   <span style="color:#993300;">
+    Bob
+   </span>
+  </strong>
+  . This is by
+  <span style="color:#008000;">
+   <a href="https://en.wikipedia.org/wiki/Alice_and_Bob" rel="noopener noreferrer" style="color:#008000;" target="_blank">
+    mathy convention
+   </a>
+  </span>
+  and because
+  <span style="color:#008000;">
+   threesomes are hard
+  </span>
+  , not because I have anything against gay orgies. Alice and Bob have a lot of possible actions they can take at any stage of a relationship, those fall into two broad classes: actions that are beneficial to the other person (messaging, setting up a date, commitment, being a loving partner for decades) and actions that don’t and are primarily selfish. Let’s broadly call these
+  <span style="color:#993300;">
+   <strong>
+    Woo
+   </strong>
+  </span>
+  and
+  <span style="color:#993300;">
+   <strong>
+    Neglect
+   </strong>
+  </span>
+  . The actions Alice and Bob take result in outcomes for both of them, anything from the small joy of a
+  <em>
+   “you’re cute”
+  </em>
+  text to the heartbreaking pain of a
+  <em>
+   “ur Kut”
+  </em>
+  text. The outcomes are not necessarily selfish: happiness for your beloved is included. Of course, we’ll reduce all that complexity to simple numbers – each player is trying to get the best outcome, in our game –
+  <strong>
+   <span style="color:#993300;">
+    the highest number
+   </span>
+  </strong>
+  .
+ </p>
+ <p>
+  Let’s start with a simple game to become familiar with the notation:
+  <span style="color:#0000ff;">
+   wooing gives 3 points
+  </span>
+  to the other player. For example, wooing is simply liking the other person:
+ </p>
+ <table>
+  <tbody>
+   <tr>
+    <td width="213">
+     <span style="color:#993300;">
+      <strong>
+       Liking Game
+      </strong>
+     </span>
+    </td>
+    <td width="213">
+     Bob woos
+    </td>
+    <td width="213">
+     Bob neglects
+    </td>
+   </tr>
+   <tr>
+    <td width="213">
+     Alice woos
+    </td>
+    <td width="213">
+     Alice gets 3 , Bob gets 3
+    </td>
+    <td width="213">
+     A: 0 , B: 3
+    </td>
+   </tr>
+   <tr>
+    <td width="213">
+     Alice neglects
+    </td>
+    <td width="213">
+     A: 3 , B: 0
+    </td>
+    <td width="213">
+     A: 0 , B: 0
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  In this game, neither player has a strong incentive to do anything: wooing is costless but it doesn’t help you personally. Alice and Bob both
+  <span style="color:#008000;">
+   <a href="http://www.urbandictionary.com/define.php?term=Like+Whore" rel="noopener noreferrer" style="color:#008000;" target="_blank">
+    like to be liked
+   </a>
+  </span>
+  , but can’t do much about it.
+ </p>
+ <figure aria-describedby="caption-attachment-5353" class="wp-caption aligncenter" data-shortcode="caption" id="attachment_5353" style="width: 479px">
+  <img alt="please-like-me" class="aligncenter wp-image-5353" data-attachment-id="5353" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="please-like-me" data-large-file="https://putanumonit.files.wordpress.com/2016/02/please-like-me.jpg?w=900" data-medium-file="https://putanumonit.files.wordpress.com/2016/02/please-like-me.jpg?w=300" data-orig-file="https://putanumonit.files.wordpress.com/2016/02/please-like-me.jpg" data-orig-size="940,529" data-permalink="https://putanumonit.com/2016/02/20/018-dating_3/please-like-me/" height="270" loading="lazy" sizes="(max-width: 479px) 100vw, 479px" src="https://putanumonit.files.wordpress.com/2016/02/please-like-me.jpg?w=479&amp;h=270" srcset="https://putanumonit.files.wordpress.com/2016/02/please-like-me.jpg?w=479&amp;h=270 479w, https://putanumonit.files.wordpress.com/2016/02/please-like-me.jpg?w=150&amp;h=84 150w, https://putanumonit.files.wordpress.com/2016/02/please-like-me.jpg?w=300&amp;h=169 300w, https://putanumonit.files.wordpress.com/2016/02/please-like-me.jpg?w=768&amp;h=432 768w, https://putanumonit.files.wordpress.com/2016/02/please-like-me.jpg 940w" width="479"/>
+  <figcaption class="wp-caption-text" id="caption-attachment-5353">
+   Cake would help as part of a wooing strategy
+  </figcaption>
+ </figure>
+ <p>
+  Let’s add a wrinkle:
+  <span style="color:#0000ff;">
+   wooing gives 3 points
+  </span>
+  to the other but
+  <span style="color:#0000ff;">
+   costs 1 point
+  </span>
+  to yourself. For example, wooing is telling the other person that you like them and asking them on a date. The costs are things like losing the option to ask out someone else and the effort of planning the date.
+ </p>
+ <table>
+  <tbody>
+   <tr>
+    <td width="213">
+     <strong>
+      <span style="color:#993300;">
+       Dater’s Dilemma
+      </span>
+     </strong>
+    </td>
+    <td width="213">
+     Bob woos
+    </td>
+    <td width="213">
+     Bob neglects
+    </td>
+   </tr>
+   <tr>
+    <td width="213">
+     Alice woos
+    </td>
+    <td style="text-align:center;" width="213">
+     <strong>
+      2
+     </strong>
+     ,
+     <strong>
+      2
+     </strong>
+    </td>
+    <td style="text-align:center;" width="213">
+     <strong>
+      -1
+     </strong>
+     , 3
+    </td>
+   </tr>
+   <tr>
+    <td width="213">
+     Alice neglects
+    </td>
+    <td style="text-align:center;" width="213">
+     3 ,
+     <strong>
+      -1
+     </strong>
+    </td>
+    <td style="text-align:center;" width="213">
+     0, 0
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  We’ve ended up in a tricky situation: every player prefers to neglect regardless of the other’s choice. Whether Alice woos or neglects, Bob will always get more by neglecting. Both players prefer mutual wooing, but will end up in the bottom right mutual neglect square! This thorny predicament is the classic
+  <span style="color:#008000;">
+   <a href="https://en.wikipedia.org/wiki/Prisoner%27s_dilemma" rel="noopener noreferrer" style="color:#008000;" target="_blank">
+    Prisoner’s Dilemma
+   </a>
+  </span>
+  , in which both players’ self-interest prevents their cooperation. The prisoner’s dilemma has been extensively researched for six decades usually with the goal of finding a solution that makes both players cooperate (woo) for mutual benefit. These solutions fall into three broad classes:
+ </p>
+ <ol>
+  <li>
+   Utilizing
+   <span style="color:#008000;">
+    <a href="https://intelligence.org/files/TDT.pdf" rel="noopener noreferrer" style="color:#008000;" target="_blank">
+     super-rational timeless decision theory
+    </a>
+   </span>
+   . This requires either being a super-intelligent reasoner with access to the other player’s decision-making source code, or reading
+   <span style="color:#008000;">
+    <a href="https://intelligence.org/files/TDT.pdf" rel="noopener noreferrer" style="color:#008000;" target="_blank">
+     a 120-page PDF
+    </a>
+   </span>
+   which seems a lot harder.
+   <img alt="robots in love" class="wp-image-5335 aligncenter" data-attachment-id="5335" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="robots in love" data-large-file="https://putanumonit.files.wordpress.com/2016/02/robots-in-love.jpg?w=564" data-medium-file="https://putanumonit.files.wordpress.com/2016/02/robots-in-love.jpg?w=300" data-orig-file="https://putanumonit.files.wordpress.com/2016/02/robots-in-love.jpg" data-orig-size="564,510" data-permalink="https://putanumonit.com/2016/02/20/018-dating_3/robots-in-love/" height="303" loading="lazy" sizes="(max-width: 335px) 100vw, 335px" src="https://putanumonit.files.wordpress.com/2016/02/robots-in-love.jpg?w=335&amp;h=303" srcset="https://putanumonit.files.wordpress.com/2016/02/robots-in-love.jpg?w=335&amp;h=303 335w, https://putanumonit.files.wordpress.com/2016/02/robots-in-love.jpg?w=150&amp;h=136 150w, https://putanumonit.files.wordpress.com/2016/02/robots-in-love.jpg?w=300&amp;h=271 300w, https://putanumonit.files.wordpress.com/2016/02/robots-in-love.jpg 564w" width="335"/>
+  </li>
+  <li>
+   Enforcing a cooperation contract. If the Alice and Bob can remove each other’s “neglect” option, they end up in woo/woo for lack of alternative. Common ways to try and achieve this are entering into holy matrimony or, for those that are really serious, changing your status on Facebook. This is slightly less arduous than reading a long PDF, but may still not work for everybody.
+  </li>
+  <li>
+   Playing the “game” several times and rewarding the other player’s “woos” by using a
+   <span style="color:#008000;">
+    <a href="https://en.wikipedia.org/wiki/Tit_for_tat#In_game_theory" rel="noopener noreferrer" style="color:#008000;" target="_blank">
+     tit-for-tat strategy
+    </a>
+   </span>
+   .
+  </li>
+ </ol>
+ <p>
+  The simplest example of tit-for-tat is a promise to keep wooing as long as the other person does. Instead of analyzing a series of games we can fold that incentive into the outcomes of a single game. If mutual-wooing is rewarded, it gives an
+  <span style="color:#0000ff;">
+   extra 3 points to yourself
+  </span>
+  because you’ll partner will woo in the next round. Let’s see how the game looks like with 3 points for each player added to the woo/woo square:
+ </p>
+ <table style="height:117px;" width="246">
+  <tbody>
+   <tr>
+    <td width="213">
+     <strong>
+      <span style="color:#993300;">
+       Stag Hunt
+      </span>
+     </strong>
+    </td>
+    <td width="213">
+     Bob woos
+    </td>
+    <td width="213">
+     Bob neglects
+    </td>
+   </tr>
+   <tr>
+    <td width="213">
+     Alice woos
+    </td>
+    <td style="text-align:center;" width="213">
+     <strong>
+      5
+     </strong>
+     ,
+     <strong>
+      5
+     </strong>
+    </td>
+    <td style="text-align:center;" width="213">
+     -1 , 3
+    </td>
+   </tr>
+   <tr>
+    <td width="213">
+     Alice neglects
+    </td>
+    <td style="text-align:center;" width="213">
+     3 , -1
+    </td>
+    <td style="text-align:center;" width="213">
+     0, 0
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  This game is called
+  <span style="color:#008000;">
+   <a href="http://www.socsci.uci.edu/~bskyrms/bio/papers/StagHunt.pdf" rel="noopener noreferrer" style="color:#008000;" target="_blank">
+    the Stag Hunt
+   </a>
+  </span>
+  (the name comes from a scenario in which two hunters must cooperate to hunt a stag, not from a scenario where the hunters meet for a
+  <span style="color:#008000;">
+   <a href="http://www.urbandictionary.com/define.php?term=stag+party" rel="noopener noreferrer" style="color:#008000;" target="_blank">
+    stag party
+   </a>
+  </span>
+  ). The new scenario changed an adversarial game into a game of cooperation: each player does best by
+  <span style="color:#993300;">
+   <strong>
+    matching
+   </strong>
+  </span>
+  what the other player does. If Alice woos, Bob gets an
+  <span style="color:#0000ff;">
+   extra 2 points
+  </span>
+  (5 instead of 3) from
+  <span style="color:#993300;">
+   reciprocating the woo
+  </span>
+  . If Alice neglects, Bob gains an
+  <span style="color:#0000ff;">
+   extra 1 point
+  </span>
+  by
+  <span style="color:#993300;">
+   neglecting
+  </span>
+  as well.
+ </p>
+ <p>
+  <img alt="stag love" class="wp-image-5342 aligncenter" data-attachment-id="5342" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="stag love" data-large-file="https://putanumonit.files.wordpress.com/2016/02/stag-love.jpg?w=188" data-medium-file="https://putanumonit.files.wordpress.com/2016/02/stag-love.jpg?w=188" data-orig-file="https://putanumonit.files.wordpress.com/2016/02/stag-love.jpg" data-orig-size="188,188" data-permalink="https://putanumonit.com/2016/02/20/018-dating_3/stag-love/" height="242" loading="lazy" sizes="(max-width: 242px) 100vw, 242px" src="https://putanumonit.files.wordpress.com/2016/02/stag-love.jpg?w=242&amp;h=242" srcset="https://putanumonit.files.wordpress.com/2016/02/stag-love.jpg 188w, https://putanumonit.files.wordpress.com/2016/02/stag-love.jpg?w=150&amp;h=150 150w" width="242"/>
+ </p>
+ <p>
+  Finally, our model is telling us some interesting things. The first thing to note is that the stag hunt has a chance to end up in woo/woo only if both players get more from their wooing being reciprocated than from neglecting. For example, maybe Bob doesn’t like Alice that much, her reciprocated affection is only worth
+  <span style="color:#0000ff;">
+   1 points
+  </span>
+  to him instead of 3.
+ </p>
+ <table>
+  <tbody>
+   <tr>
+    <td width="213">
+     <span style="color:#993300;">
+      <strong>
+       One-Sided Stag
+      </strong>
+     </span>
+    </td>
+    <td width="213">
+     Bob woos
+    </td>
+    <td width="213">
+     Bob neglects
+    </td>
+   </tr>
+   <tr>
+    <td width="213">
+     Alice woos
+    </td>
+    <td style="text-align:center;" width="213">
+     5 ,
+     <strong>
+      3
+     </strong>
+    </td>
+    <td style="text-align:center;" width="213">
+     -1 ,
+     <strong>
+      3
+     </strong>
+    </td>
+   </tr>
+   <tr>
+    <td width="213">
+     Alice neglects
+    </td>
+    <td style="text-align:center;" width="213">
+     3 , -1
+    </td>
+    <td style="text-align:center;" width="213">
+     0,
+     <strong>
+      0
+     </strong>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  Even though Alice still wants mutual wooing, Bob can always do at least as well for himself by neglecting. As soon as he neglects, it makes sense for Alice to do the same and the pair will end up in the bottom right neglect/neglect square. No matter how strong Alice’s feelings are, it takes two to tango. The same will happen if the rewards for neglecting are high, for example, if Alice has many suitors and wants to keep her dating options open.
+ </p>
+ <hr/>
+ <p>
+  Let’s go back to the original Stag Hunt. Alice tries to match Bob’s move, but what if she doesn’t know which move he’s making? Imagine the scenario: last night was Alice and Bob’s first date, pleasant but not breathtaking. Did Bob like her too? What if he did but he has other dates set up? Will he text her to ask her out again? What if someone told him that real men wait 3 days to text back? What if it was
+  <span style="color:#008000;">
+   <a href="https://singleguysguidetodating.wordpress.com/tag/7-day-rule/" rel="noopener noreferrer" style="color:#008000;" target="_blank">
+    7 days
+   </a>
+  </span>
+  ?
+ </p>
+ <p>
+  <img alt="waiting for text" class="wp-image-5345 aligncenter" data-attachment-id="5345" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="waiting for text" data-large-file="https://putanumonit.files.wordpress.com/2016/02/waiting-for-text.jpg?w=500" data-medium-file="https://putanumonit.files.wordpress.com/2016/02/waiting-for-text.jpg?w=300" data-orig-file="https://putanumonit.files.wordpress.com/2016/02/waiting-for-text.jpg" data-orig-size="500,369" data-permalink="https://putanumonit.com/2016/02/20/018-dating_3/waiting-for-text/" height="258" loading="lazy" sizes="(max-width: 350px) 100vw, 350px" src="https://putanumonit.files.wordpress.com/2016/02/waiting-for-text.jpg?w=350&amp;h=258" srcset="https://putanumonit.files.wordpress.com/2016/02/waiting-for-text.jpg?w=350&amp;h=258 350w, https://putanumonit.files.wordpress.com/2016/02/waiting-for-text.jpg?w=150&amp;h=111 150w, https://putanumonit.files.wordpress.com/2016/02/waiting-for-text.jpg?w=300&amp;h=221 300w, https://putanumonit.files.wordpress.com/2016/02/waiting-for-text.jpg 500w" width="350"/>
+ </p>
+ <p>
+  To account for uncertainty, Alice can look at the game probabilistically. If Alice thinks that there’s a probability
+  <span style="color:#0000ff;">
+   P
+  </span>
+  that Bob will woo her, her expected outcomes for each action are as follows:
+ </p>
+ <p>
+  Outcome for wooing =
+  <span style="color:#0000ff;">
+   P x 5 + (1-P) x (-1)
+  </span>
+  =
+  <span style="color:#0000ff;">
+   6P – 1
+  </span>
+ </p>
+ <p>
+  Outcome for neglecting =
+  <span style="color:#0000ff;">
+   P x 3 + (1-P) x 0
+  </span>
+  =
+  <span style="color:#0000ff;">
+   3P
+  </span>
+ </p>
+ <p>
+  Alice will prefer wooing if
+  <span style="color:#0000ff;">
+   6P-1 &gt; 3P
+  </span>
+  , or in other words if
+  <span style="color:#0000ff;">
+   P &gt; 1/3
+  </span>
+  .
+ </p>
+ <p>
+  This doesn’t sound so bad: as long as Bob thinks there’s a 1 in 3 chance that Alice is waiting for him and Alice thinks there’s a 1 in 3 chance he’ll eventually ask her out both players will end up in the best situation. The problem is that the threshold probability for a happily-ever-after is sensitive to even small changes in the payouts (ignore for the moment that the payouts are made up anyway).
+ </p>
+ <p>
+  Let’s say that Alice and Bob both read
+  <span style="color:#008000;">
+   <a href="https://putanumonit.com/2016/02/03/015-dating_1/" rel="noopener noreferrer" style="color:#008000;" target="_blank">
+    this excellent guide
+   </a>
+  </span>
+  that makes it extremely easy for them to set up another date with a good looking stranger. Let’s assume that this gives them an
+  <span style="color:#0000ff;">
+   extra 1 point
+  </span>
+  for neglecting, since neglecting means going back to the endless well of OKCupid for a new match.
+ </p>
+ <table style="height:117px;" width="246">
+  <tbody>
+   <tr>
+    <td width="213">
+     <strong>
+      <span style="color:#993300;">
+       Stag Hunt in the age of OkCupid
+      </span>
+     </strong>
+    </td>
+    <td width="213">
+     Bob woos (probability P)
+    </td>
+    <td width="213">
+     Bob neglects (probability 1-P)
+    </td>
+   </tr>
+   <tr>
+    <td width="213">
+     Alice woos
+    </td>
+    <td style="text-align:center;" width="213">
+     5 , 5
+    </td>
+    <td style="text-align:center;" width="213">
+     -1 ,
+     <strong>
+      4
+     </strong>
+    </td>
+   </tr>
+   <tr>
+    <td width="213">
+     Alice neglects
+    </td>
+    <td style="text-align:center;" width="213">
+     <strong>
+      4
+     </strong>
+     , -1
+    </td>
+    <td style="text-align:center;" width="213">
+     <strong>
+      1
+     </strong>
+     ,
+     <strong>
+      1
+     </strong>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  Alice’s outcome for wooing is still
+  <span style="color:#0000ff;">
+   6P-1
+  </span>
+  , but now her outcome for neglecting is
+  <span style="color:#0000ff;">
+   3P+1
+  </span>
+  . To justify wooing, she needs
+  <span style="color:#0000ff;">
+   3P &gt; 2
+  </span>
+  , or
+  <span style="color:#0000ff;">
+   P &gt; 2/3
+  </span>
+  – a much higher bar! That’s the lament in the age of OkCupid:
+  <strong>
+   the
+   <em>
+    easier
+   </em>
+   it is to get a first date, the
+   <em>
+    harder
+   </em>
+   it is to get to a fifth
+  </strong>
+  .
+ </p>
+ <p>
+  Personal note: a lot of people confuse this lesson with a different one, namely that
+  <span style="color:#008000;">
+   <a href="http://www.dailymail.co.uk/femail/article-2307026/How-online-dating-killing-commitment-Millions-women-think-love-just-click-away-internet-romance-ruin-chance-lasting-relationship.html" rel="noopener noreferrer" style="color:#008000;" target="_blank">
+    the easier it is to find casual sex, the harder it is to find a lasting relationship
+   </a>
+  </span>
+  because guys will not commit to a woman when they can sleep around for free. This strikes me as utterly false, I have never
+  <em>
+   lost
+  </em>
+  respect or affection for anyone because they had sex with me. Quite the opposite! The familiar trope of dating being a contest of wills in which the man wants sex and the woman wants a ring turns romance back into a prisoner’s dilemma, and prisoner’s dilemmas rarely result in lasting happiness. In online dating it may be hard to tell apart the guys that are looking for long-term relationships (high P) from those that don’t (low P), but I don’t think the guys themselves shift their preferences in response to the “market” that much.
+ </p>
+ <p>
+  <img alt="one-night-stand" class="wp-image-5379 aligncenter" data-attachment-id="5379" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="one-night-stand" data-large-file="https://putanumonit.files.wordpress.com/2016/02/one-night-stand.jpg?w=420" data-medium-file="https://putanumonit.files.wordpress.com/2016/02/one-night-stand.jpg?w=300" data-orig-file="https://putanumonit.files.wordpress.com/2016/02/one-night-stand.jpg" data-orig-size="420,294" data-permalink="https://putanumonit.com/2016/02/20/018-dating_3/one-night-stand/" height="274" loading="lazy" sizes="(max-width: 391px) 100vw, 391px" src="https://putanumonit.files.wordpress.com/2016/02/one-night-stand.jpg?w=391&amp;h=274" srcset="https://putanumonit.files.wordpress.com/2016/02/one-night-stand.jpg?w=391&amp;h=274 391w, https://putanumonit.files.wordpress.com/2016/02/one-night-stand.jpg?w=150&amp;h=105 150w, https://putanumonit.files.wordpress.com/2016/02/one-night-stand.jpg?w=300&amp;h=210 300w, https://putanumonit.files.wordpress.com/2016/02/one-night-stand.jpg 420w" width="391"/>
+ </p>
+ <p>
+  What can Bob and Alice do to end up in the top left corner? One solution is to increase the reward for wooing, if Alice got
+  <span style="color:#0000ff;">
+   20 points
+  </span>
+  from Bob’s affection, she would wait for his text even if she thinks it’s not likely to arrive. Whenever there’s a good game theory equilibrium to be had you know that the
+  <span style="color:#008000;">
+   <a href="https://en.wikipedia.org/wiki/European_pied_flycatcher#Mating_systems" rel="noopener noreferrer" style="color:#008000;" target="_blank">
+    European pied flycatcher
+   </a>
+  </span>
+  will take advantage of it: a sexy flycatcher male will mate with several females in different nests, the less attractive male will attract a single female by giving her his undivided attention.
+ </p>
+ <hr/>
+ <p>
+  Increasing your attractiveness is hard, not everyone has smooth back feathers, a skill in nest construction and a pitch-perfect mating song. There’s an easier way to win at coordination games: pre-commitment. In most cases in life you want to keep your options open, but in
+  <span style="color:#008000;">
+   <a href="https://en.wikipedia.org/wiki/Battle_of_the_sexes_(game_theory)" rel="noopener noreferrer" style="color:#008000;" target="_blank">
+    coordination games
+   </a>
+  </span>
+  (and even some
+  <span style="color:#008000;">
+   <a href="https://en.wikipedia.org/wiki/Chicken_(game)" rel="noopener noreferrer" style="color:#008000;" target="_blank">
+    adversarial games
+   </a>
+  </span>
+  ) the best move is to get rid of uncertainty by getting rid of some of your options.
+ </p>
+ <p>
+  When I started dating in NYC I heard every possible advice regarding the post-first date text from
+  <em>
+   “If you don’t text in 30 minutes to check that she made it home OK she’ll know you don’t give a shit about her”
+  </em>
+  to
+  <em>
+   “Anything less than a week makes you seem desperate”
+  </em>
+  . The problem is, there’s no right answer that works for everyone. Some women will give up if I don’t text the same day and find someone else, and some will see it as breaking a norm if I do. Here’s what I ended up saying at the end of every first date:
+ </p>
+ <blockquote>
+  <p>
+   <span style="color:#333399;">
+    I had a great time tonight, I’m going to text you tomorrow at 8 pm and if you’re into me we can set something up for next week.
+   </span>
+  </p>
+ </blockquote>
+ <p>
+  Here’s the game theory translation:
+ </p>
+ <blockquote>
+  <p>
+   <span style="color:#333399;">
+    I commit myself to playing “woo” for a day, so if you want to coordinate you can play “woo” without being afraid of uncertainty. Since you know exactly when to expect my text, if I don’t hear back from you tomorrow I’ll see that as a clear signal that you’re playing “neglect” and accordingly will switch to “neglect” from that point on.
+   </span>
+  </p>
+ </blockquote>
+ <p>
+  Both of us have a day to decide if we like each other, but I have eliminated any chance of our relationship failing because of unpredictability and bad coordination. It felt a little awkward the first time I did it, but the real awkwardness is stressing for days over what should be simple and fun – telling someone you like them. Ladies, there’s nothing at all about this strategy that wouldn’t work equally well for you.
+ </p>
+ <p>
+  This week a girl who saw my profile on OkCupid read this blog, so we had no choice but to have lunch to discuss romantic game theory for three hours. She said that she always texts within 24 hours if she doesn’t hear from the guy first. If the guy doesn’t like her, she just saved herself time. If the guy was just shy, she helped him out. And if the guy doesn’t like girls texting him first, he’s not the man for her anyway.
+ </p>
+ <p>
+  <img alt="happy text" class="size-full wp-image-5408 aligncenter" data-attachment-id="5408" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="happy text" data-large-file="https://putanumonit.files.wordpress.com/2016/02/happy-text.jpg?w=300" data-medium-file="https://putanumonit.files.wordpress.com/2016/02/happy-text.jpg?w=300" data-orig-file="https://putanumonit.files.wordpress.com/2016/02/happy-text.jpg" data-orig-size="300,168" data-permalink="https://putanumonit.com/2016/02/20/018-dating_3/happy-text/" sizes="(max-width: 300px) 100vw, 300px" src="https://putanumonit.files.wordpress.com/2016/02/happy-text.jpg?w=900" srcset="https://putanumonit.files.wordpress.com/2016/02/happy-text.jpg 300w, https://putanumonit.files.wordpress.com/2016/02/happy-text.jpg?w=150 150w"/>
+ </p>
+ <p>
+  There’s a general theme that cooperating with a partner is much easier than overpowering an opponent. In the end, everyone in your dating pool has the same goals, every interaction from message to marriage should be seen as an opportunity to coordinate. Yet, a lot of the dating advice you read treats it as antagonistic competition, advising you to look for an edge and keep your cards close to your chest. Next week I’ll explore a different foundation to build romance on:
+  <a href="https://putanumonit.com/2016/03/23/20_nice_guys/" rel="noopener noreferrer" target="_blank">
+   total honesty, total openness, total vulnerability
+  </a>
+  . And BDSM.
+ </p>
+ <p>
+ </p>
+ <div class="sharedaddy sd-like-enabled sd-sharing-enabled" id="jp-post-flair">
+  <div class="sharedaddy sd-sharing-enabled">
+   <div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing">
+    <h3 class="sd-title">
+     Share this:
+    </h3>
+    <div class="sd-content">
+     <ul>
+      <li class="share-facebook">
+       <a class="share-facebook sd-button share-icon no-text" data-shared="sharing-facebook-4643" href="https://putanumonit.com/2016/02/20/018-dating_3/?share=facebook" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Facebook">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Facebook (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-twitter">
+       <a class="share-twitter sd-button share-icon no-text" data-shared="sharing-twitter-4643" href="https://putanumonit.com/2016/02/20/018-dating_3/?share=twitter" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Twitter">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Twitter (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-pocket">
+       <a class="share-pocket sd-button share-icon no-text" data-shared="" href="https://putanumonit.com/2016/02/20/018-dating_3/?share=pocket" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Pocket">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Pocket (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-reddit">
+       <a class="share-reddit sd-button share-icon no-text" data-shared="" href="https://putanumonit.com/2016/02/20/018-dating_3/?share=reddit" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Reddit">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Reddit (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-tumblr">
+       <a class="share-tumblr sd-button share-icon no-text" data-shared="" href="https://putanumonit.com/2016/02/20/018-dating_3/?share=tumblr" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Tumblr">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Tumblr (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-email">
+       <a class="share-email sd-button share-icon no-text" data-shared="" href="https://putanumonit.com/2016/02/20/018-dating_3/?share=email" rel="nofollow noopener noreferrer" target="_blank" title="Click to email this to a friend">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to email this to a friend (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-end">
+      </li>
+     </ul>
+    </div>
+   </div>
+  </div>
+  <div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded" data-name="like-post-frame-101823629-4643-6010a90427894" data-src="//widgets.wp.com/likes/index.html?ver=20200826#blog_id=101823629&amp;post_id=4643&amp;origin=putanumonit.wordpress.com&amp;obj_id=101823629-4643-6010a90427894&amp;domain=putanumonit.com" id="like-post-wrapper-101823629-4643-6010a90427894">
+   <h3 class="sd-title">
+    Like this:
+   </h3>
+   <div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px;">
+    <span class="button">
+     <span>
+      Like
+     </span>
+    </span>
+    <span class="loading">
+     Loading...
+    </span>
+   </div>
+   <span class="sd-text-color">
+   </span>
+   <a class="sd-link-color">
+   </a>
+  </div>
+  <div class="jp-relatedposts" id="jp-relatedposts">
+   <h3 class="jp-relatedposts-headline">
+    <em>
+     Related
+    </em>
+   </h3>
+  </div>
+ </div>
+</div>

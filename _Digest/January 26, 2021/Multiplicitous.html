@@ -1,0 +1,853 @@
+<h1>
+<meta charset="utf-8">
+ Multiplicitous
+</h1>
+<h2>
+</h2>
+<i>
+ Published December 18, 2016 on Put A Number On It!.
+</i>
+<div class="entry-content">
+ <h2>
+  P-Vices
+ </h2>
+ <p>
+  Of all the terrible vices known to man, I guess NFL gambling and alternative medicine aren’t very terrible. Making medicine that doesn’t work (if it worked, it wouldn’t be
+  <em>
+   alternative
+  </em>
+  ) is also a tough way to make money. But if you’re able to squeeze a p-value of 0.05 for acupuncture out of
+  <a href="http://www.dcscience.net/2011/05/31/acupuncturists-show-that-acupuncture-doesnt-work-but-conclude-the-opposite-journal-fails/" target="_blank">
+   a trial that clearly shows that acupuncture has zero effect
+  </a>
+  , you can make money and get a PhD in medicine!
+ </p>
+ <p>
+  It’s also hard to make money off of gambling on the NFL. However, you can make money by
+  <em>
+   selling
+  </em>
+  NFL gambling advice. For example, before the Eagles played as 6 point underdogs on the turf in Seattle after a 208 yard rushing game,
+  <a href="http://www.vegasinsider.com/nfl/story.cfm/story/1815888" target="_blank">
+   gambling guru Vince Akins declared
+  </a>
+  :
+ </p>
+ <blockquote>
+  <p>
+   The Eagles are 10-0 against the spread since Dec 18, 2005 as an underdog and on turf after they’ve had more than 150 yards rushing last game.
+  </p>
+ </blockquote>
+ <p>
+  10-0! Betting against the spread is a 50-50 proposition, so 10-0 has a p-value of 1/(2^10) =  1/1024 = 0.0009. That’s enough statistical significance not just to bet your house on the Eagles, but also to get
+  <a href="http://andrewgelman.com/2016/09/21/what-has-happened-down-here-is-the-winds-have-changed/" target="_blank">
+   a PhD in social psychology
+  </a>
+  .
+ </p>
+ <p>
+  The easiest way to generate the p-value of your heart’s desire it to test multiple hypotheses, and only report the one with the best p-value. This is a serious enough problem
+  <a href="http://www.stat.columbia.edu/~gelman/research/unpublished/p_hacking.pdf" target="_blank">
+   when it happens accidentally to honest and well-meaning researchers
+  </a>
+  to
+  <a href="http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0020124" target="_blank">
+   invalidate whole fields of research
+  </a>
+  . But unscrupulous swindlers do it
+  <em>
+   on purpose
+  </em>
+  and get away it, because their audience suffers from two cognitive biases:
+ </p>
+ <ol>
+  <li>
+   Conjunction fallacy.
+  </li>
+  <li>
+   Sucking at statistics.
+  </li>
+ </ol>
+ <p>
+  No more! In this new installment of
+  <a href="https://putanumonit.com/category/defense-against-the-dark-arts/" target="_blank">
+   defense against the dark arts
+  </a>
+  we will learn to quickly analyze multiplicity, notice conjunctions, and bet against the Eagles.
+ </p>
+ <hr/>
+ <h2>
+  Hacking in Depth
+ </h2>
+ <p>
+  <em>
+   [This part gets stats-heavy enough to earn this post the
+  </em>
+  <a href="https://putanumonit.com/category/math-class/" target="_blank">
+   Math Class
+  </a>
+  <em>
+   tag. If you want to skip the textbooky bits and get down to gambling tips, scroll down to
+  </em>
+  “Reading the Fish”
+  <em>
+   ]
+  </em>
+ </p>
+ <p>
+  The easiest way to generate multiple hypotheses out of a single data set (that didn’t show what you wanted it to show) is to break the data into subgroups. You can break the population into many groups at once (
+  <a href="https://xkcd.com/882/" target="_blank">
+   Green Jelly Bean method
+  </a>
+  ), or in consecutive stages (
+  <a href="http://slatestarcodex.com/2014/01/02/two-dark-side-statistics-papers/" target="_blank">
+   Elderly Hispanic Woman method
+  </a>
+  ).
+ </p>
+ <p>
+  The latter method works like this: let’s say that you have a group of people (for example,
+  <a href="https://putanumonit.com/2016/10/06/theory-of-an-immoral-sentiment/" target="_blank">
+   Tajiks
+  </a>
+  ) who suffer from a medical condition (for example,
+  <a href="https://putanumonit.com/2016/10/06/theory-of-an-immoral-sentiment/" target="_blank">
+   descolada
+  </a>
+  ). Normally, exactly one half of sick people recover. You invented a miracle drug that takes that number all the way up to… 50%. That’s not good enough even for the
+  <a href="http://www.dcscience.net/paterson-acu-BJGP-2011.pdf" target="_blank">
+   British Journal of General Practice
+  </a>
+  .
+ </p>
+ <p>
+  But then you notice that of the men who took the drug 49% recovered, and of the women, 51% did. And if you only look at women above age 60, by pure chance, that number is 55%. And maybe 13 of these older Tajik women, because Tajikistan didn’t build a wall, happened to be Hispanic. And of those, by accident of random distribution, 10 happened to recover. Hey, 10 out of 13 is a 77% success rate, and more importantly it gives a p-value of… 0.046! Eureka, your medical career is saved with the publication of “Miracle Drug Cures Descolada in Elderly Hispanic Women” and
+  <a href="https://www.hachettebookgroup.com/titles/amy-cuddy/presence/9780316256575/" target="_blank">
+   you get a book deal
+  </a>
+  .
+ </p>
+ <p>
+  Hopefully my readers’
+  <a href="https://putanumonit.com/2015/12/17/009-smelly/" target="_blank">
+   nose is sharp enough
+  </a>
+  not to fall for 10/13 elderly Hispanic women. Your first guide should be the following simple rule:
+ </p>
+ <p class="rules">
+  <strong>
+   Rule of small sample sizes
+  </strong>
+  – If the
+  <a href="https://putanumonit.com/2016/04/17/022-power_skeptic/" target="_blank">
+   sample size is too small
+  </a>
+  , any result
+  <a href="http://andrewgelman.com/2014/11/17/power-06-looks-like-get-used/" target="_blank">
+   is almost certainly just mining noise
+  </a>
+  .
+ </p>
+ <p class="rules">
+  <strong>
+   Corollary
+  </strong>
+  – If the
+  <a href="https://en.wikipedia.org/wiki/MMR_vaccine_controversy#1998_Lancet_paper" target="_blank">
+   sample size of a study
+  </a>
+  is outnumbered 100:1 by the number of
+  <a href="http://www.jennymccarthybodycount.com/" target="_blank">
+   people who died because of that study
+  </a>
+  ,  it’s probably not a great study.
+ </p>
+ <p>
+  But what if the drug did nothing detectable for most of the population, but cured 61 of 90 Hispanic women of all ages. That’s more than two thirds, the sample size of 90 isn’t tiny, and it comes out to a p-value of 0.0005, is that good enough?
+ </p>
+ <p>
+  Let’s do the math.
+ </p>
+ <p>
+  First, some theory. P-values are generally a terrible tool. Testing with a p-value threshold of 0.05 should mean that you accept a false result by accident only 5% of the time, yet
+  <a href="http://www.dcscience.net/2014/03/24/on-the-hazards-of-significance-testing-part-2-the-false-discovery-rate-or-how-not-to-make-a-fool-of-yourself-with-p-values/" target="_blank">
+   even in theory using a 5% p-value makes a fool of you over 30% of the time
+  </a>
+  .  P-values do one cool thing, however: they transform any distribution into a uniform distribution. For example, most samples from a normal distribution will lie close to the mean, but their
+  <a href="https://en.wikipedia.org/wiki/P-value" target="_blank">
+   p-values
+  </a>
+  will be spread evenly (uniformly) across the range between 0 and 1.
+ </p>
+ <p>
+  <img alt="pvaluaton.png" class="wp-image-19148 aligncenter" data-attachment-id="19148" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="pvaluaton" data-large-file="https://putanumonit.files.wordpress.com/2016/12/pvaluaton1.png?w=900" data-medium-file="https://putanumonit.files.wordpress.com/2016/12/pvaluaton1.png?w=300" data-orig-file="https://putanumonit.files.wordpress.com/2016/12/pvaluaton1.png" data-orig-size="1077,814" data-permalink="https://putanumonit.com/2016/12/18/multiplicitous/pvaluaton/" height="453" loading="lazy" sizes="(max-width: 599px) 100vw, 599px" src="https://putanumonit.files.wordpress.com/2016/12/pvaluaton1.png?w=599&amp;h=453" srcset="https://putanumonit.files.wordpress.com/2016/12/pvaluaton1.png?w=599&amp;h=453 599w, https://putanumonit.files.wordpress.com/2016/12/pvaluaton1.png?w=150&amp;h=113 150w, https://putanumonit.files.wordpress.com/2016/12/pvaluaton1.png?w=300&amp;h=227 300w, https://putanumonit.files.wordpress.com/2016/12/pvaluaton1.png?w=768&amp;h=580 768w, https://putanumonit.files.wordpress.com/2016/12/pvaluaton1.png?w=1024&amp;h=774 1024w, https://putanumonit.files.wordpress.com/2016/12/pvaluaton1.png 1077w" width="599"/>
+ </p>
+ <p>
+  <a href="https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)" target="_blank">
+   Uniform distributions
+  </a>
+  are easy to deal with. For example, if we take N samples from a uniform distribution and arrange them by order, they will fall
+  <em>
+   on average
+  </em>
+  on 1/N+1, 2/N+1, .. N/N+1. If you test four hypotheses (e.g. that four kinds of jelly beans cause acne) and their p-values fall roughly on 1/(4+1) = 0.2, 0.4, 0.6, 0.8 you know that they’re all indistinguishable from the null hypothesis as a group.
+ </p>
+ <p>
+  Usually you would only see the p-value of the best hypothesis reported, i.e. “Wonder drug cures descolada in elderly Hispanic women with p=0.0005”. The first step towards sanity is to apply the
+  <a href="https://en.wikipedia.org/wiki/Bonferroni_correction" target="_blank">
+   Bonferroni
+  </a>
+  rule:
+ </p>
+ <p class="rules">
+  <strong>
+   Bonferroni Rule
+  </strong>
+  – A p-value of α for a single hypothesis is worth about as much as a p-value of α/N for the best of N hypotheses.
+ </p>
+ <p>
+  The Bonferroni correction is usually given as an upper bound, namely that if you use an α/N p-value threshold for N hypotheses you will accept a null hypothesis as true no more often than if you use an α threshold for a single hypothesis. It actually works well as an approximation too, allowing us to replace
+  <i>
+   no more often
+  </i>
+  with
+  <i>
+   about as often
+  </i>
+  . I haven’t seen this math spelled out in the first 5 google hits, so I’ll have to do it myself.
+ </p>
+ <p>
+  h
+  <sub>
+   1
+  </sub>
+  ,…,h
+  <sub>
+   N
+  </sub>
+  are N p-values for N independent tests of null hypotheses. h
+  <sub>
+   1
+  </sub>
+  ,…,h
+  <sub>
+   N
+  </sub>
+  are all uniformly distributed between 0 and 1.
+ </p>
+ <p>
+  <em>
+   The chance that one of the N p-values falls below α/N
+  </em>
+  = P(min(h
+  <sub>
+   1
+  </sub>
+  ,…,h
+  <sub>
+   N
+  </sub>
+  ) &lt; α/N) = 1 – (1 – α/N)
+  <sup>
+   N
+  </sup>
+  ≈ 1 – e
+  <sup>
+   -α
+  </sup>
+  ≈ 1 – (1-α) = α =
+  <em>
+   the chance that single p-value falls below α
+  </em>
+  . The last bit of math there depends on a
+  <a href="http://www.drcruzan.com/DerivativesII.html" target="_blank">
+   linear approximation
+  </a>
+  of e
+  <sup>
+   x
+  </sup>
+  =1+x when x is close to 0.
+ </p>
+ <p>
+  The Bonferroni Rule applies directly when the tests are independent, but that is not the case with the Elderly Hispanic Woman method. The “cure” rate of white men is correlated positively with the rate for all white people (a broader category) and with young white men (a narrower subgroup). Is the rule still good for EHW hacking? I programmed my own simulated unscrupulous researcher to find out,
+  <a href="https://github.com/yashkaf/oldhispanic/blob/master/Multy.R" target="_blank">
+   here’s the code on GitHub
+  </a>
+  .
+ </p>
+ <p>
+  My simulation included Tajiks of three age groups (young, adult, old), two genders (the Tajiks are lagging behind on respecting genderqueers) and four races (but they’re great with racial diversity). Each of the 2*3*4=24 subgroups has 500 Tajiks in it, for a total population of 12,000. Descolada has a 50% mortality rate, so 6,000 / 12,000 cured is the average “null” result we would expect if the drug didn’t work at all. For the entire population, we would get p=0.05 if only 90 extra people were cured (6,090/12,000) for a success rate of 50.75%. A meager success rate of 51.5% takes the p-value all the way down to 0.0005.
+ </p>
+ <p class="rules">
+  <strong>
+   Rule of large sample sizes
+  </strong>
+  – With a large sample size, statistical significance doesn’t equal
+  <em>
+   actual
+  </em>
+  significance. With a large enough sample you can get tiny p-values with miniscule effect sizes.
+ </p>
+ <p class="rules">
+  <strong>
+   Corollary
+  </strong>
+  – If p-values are useless for small sample sizes, and they’re useless for large sample sizes, maybe WE SHOULD STOP USING FUCKING P-VALUES FOR HYPOTHESIS TESTING. Just compare the
+  <strong>
+   measured
+  </strong>
+  effect size to the
+  <strong>
+   predicted
+  </strong>
+  effect size, and use Bayes’ rule to update the likelihood of your prediction being correct.
+ </p>
+ <p>
+  P-values aren’t very useful in
+  <strong>
+   getting close to the truth
+  </strong>
+  , but they’re everywhere, they’re easy to work with and they’re moderately useful for
+  <strong>
+   getting away from bullshit
+  </strong>
+  . Since the latter is our goal in this essay we’ll stick with looking at p-values for now.
+ </p>
+ <p>
+  Back to Tajikistan. I simulated the entire population 1,000 times for each of three drugs: a useless one with a 50% success rate (
+  <span style="color:#993300;">
+   null drug
+  </span>
+  ), a statistically significant one with 50.75% (
+  <span style="color:#993300;">
+   good drug)
+  </span>
+  and a doubly significant drug with 51.5% (
+  <span style="color:#993300;">
+   awesome drug
+  </span>
+  ). Yes,
+  <a href="https://putanumonit.com/2016/09/01/epipenomenon/" target="_blank">
+   our standards for awesomeness in medicine
+  </a>
+  aren’t very high. I looked at the p-value of each possible sub-group of the population to pick the best one, that’s the p-hacking part.
+ </p>
+ <p>
+  Below is a sample of the output:
+ </p>
+ <p class="code">
+  13 hispanic 1    0.122530416511473
+  <br/>
+  14 female hispanic 2    0.180797304026783
+  <br/>
+  15 young hispanic 2    0.25172233581543
+  <br/>
+  16 young female hispanic 3    0.171875
+  <br/>
+  17 white 1    0.0462304905364621
+  <br/>
+  18 female white 2    0.572232224047184
+  <br/>
+  19 young white 2    0.25172233581543
+  <br/>
+  20 young female white 3   0.9453125
+  <br/>
+  21 adult 1    0.368777154492162
+  <br/>
+  22 female adult 2    0.785204746078306
+  <br/>
+  23 asian 1    0.953769509463538
+  <br/>
+  24 female asian 2    0.819202695973217
+ </p>
+ <p>
+  The second integer is the number of categories applied to the sub-group (so “asian” = 1, “asian adult female” = 3). It’s the “depth” of the hacking. In our case there are 60 groups to choose from: 1 with depth 0 (the entire population), 9 with depth 1, 26 with depth 2, 24 with depth 3. Since we’re testing the 60 groups as 60 separate hypotheses, by the Bonferroni Rule the 0.05 p-value should be replaced with 0.05 / 60 categories = 0.00083.
+ </p>
+ <p>
+  In each of the 1,000 simulations, I picked the group with the smallest p-value and plotted it along with the “hacking depth” that achieved it. The vertical lines are at p=0.05 p=0.00083. The horizontal axis the hacked p-value on a log scale and the vertical how many of the 1,000 simulations landed below it:
+ </p>
+ <p>
+  <img alt="3 Drug Phack labeled.png" class="wp-image-19256 aligncenter" data-attachment-id="19256" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="3-drug-phack-labeled" data-large-file="https://putanumonit.files.wordpress.com/2016/12/3-drug-phack-labeled.png?w=900" data-medium-file="https://putanumonit.files.wordpress.com/2016/12/3-drug-phack-labeled.png?w=300" data-orig-file="https://putanumonit.files.wordpress.com/2016/12/3-drug-phack-labeled.png" data-orig-size="1318,844" data-permalink="https://putanumonit.com/2016/12/18/multiplicitous/3-drug-phack-labeled/" height="384" loading="lazy" sizes="(max-width: 600px) 100vw, 600px" src="https://putanumonit.files.wordpress.com/2016/12/3-drug-phack-labeled.png?w=600&amp;h=384" srcset="https://putanumonit.files.wordpress.com/2016/12/3-drug-phack-labeled.png?w=600&amp;h=384 600w, https://putanumonit.files.wordpress.com/2016/12/3-drug-phack-labeled.png?w=1200&amp;h=768 1200w, https://putanumonit.files.wordpress.com/2016/12/3-drug-phack-labeled.png?w=150&amp;h=96 150w, https://putanumonit.files.wordpress.com/2016/12/3-drug-phack-labeled.png?w=300&amp;h=192 300w, https://putanumonit.files.wordpress.com/2016/12/3-drug-phack-labeled.png?w=768&amp;h=492 768w, https://putanumonit.files.wordpress.com/2016/12/3-drug-phack-labeled.png?w=1024&amp;h=656 1024w" width="600"/>
+ </p>
+ <p>
+  For the null drug, p-hacking achieves a “publishable” p-value of
+ </p>
+ <p>
+  If your goal is to do actual science (as opposed to getting published in
+  <em>
+   Science
+  </em>
+  ), you want to be comparing the evidence for competing hypotheses, not just looking if the null hypothesis is rejected. The null hypothesis is that we have a 50%
+  <span style="color:#993300;">
+   null drug
+  </span>
+  , and the competing hypothesis are the
+  <span style="color:#993300;">
+   good and awesome drugs
+  </span>
+  at 50.75% and 51.5% success rates, respectively.
+ </p>
+ <p>
+  Without p-hacking, the null drug will hit below p=0.05 5% of the time (duh), the good drug will get there 50% of the time, and the awesome drug 95% of the time. To a Bayesian, getting a p-value below 0.05 is a very strong signal that we have a useful drug on our hands: 50%:5% = 10:1 likelihood ratio that it’s the good drug and 95%:5% = 19:1 that it’s the awesome drug. If ahead of time we thought that each of the cases is equally likely (1:1:1) ratio, our ratios would now be 1:10:19, this means that the probability that the drug is the null one went from 1/3 to 1/(1+10+19) = 1/30. The null drug is 10 times less likely.
+ </p>
+ <p>
+  If you’re utterly confused by the preceding paragraph, you can
+  <a href="https://arbital.com/p/bayes_rule_odds/" target="_blank">
+   read up on Bayes’ rule and likelihood ratio on Arbital
+  </a>
+  , or just trust me that
+  <strong>
+   without p-hacking, getting a p-value below 0.05 is a strong signal that the drug is useful
+  </strong>
+  .
+ </p>
+ <p>
+  With p-hacking, however, the good and the awesome drugs don’t do so well. We’re now looking how often each drug falls below the Bonferroni Rule line of p=0.00083. Instead of 50% and 95% of the time, the good and awesome drugs get there 23% and 72% of the time. If we started from 1:1:1 odds, the new odds are roughly 1:5:15, and the probability that the drug is the null one is 1/21 instead of 1/30. The null drug is only 7 times less likely.
+ </p>
+ <p class="rules">
+  <strong>
+   Rule of hacking skepticism
+  </strong>
+  – Even though a frequentist is happy with a
+  <i>
+   corrected
+  </i>
+  p-value, a Bayesian knows better. P-hacking helps a bad (null) drug more than it does a good one (which is significant without hacking). Thus, hitting even a corrected p-value threshold is weaker evidence against the null hypothesis.
+ </p>
+ <p>
+  You can see it in the chart above: for every given p-value (vertical line) the better drugs have more green points in its vicinity (indicating less depth of hacking) and the bad drug has more red because it has to dig down to a narrow subgroup to luck into significance.
+ </p>
+ <p>
+  Just for fun, I ran another simulation in which instead of holding the success probability for each patient constant, I fixed the total proportion of cures for each drug. So in the rightmost line (null drug) exactly 6,000 of the 12,000 were cured, for the good drug exactly 6,090 and for the awesome drug 6,180.
+ </p>
+ <p>
+  <img alt="good-drug-phack-labeled" class="wp-image-19275 aligncenter" data-attachment-id="19275" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="good-drug-phack-labeled" data-large-file="https://putanumonit.files.wordpress.com/2016/12/good-drug-phack-labeled.png?w=900" data-medium-file="https://putanumonit.files.wordpress.com/2016/12/good-drug-phack-labeled.png?w=300" data-orig-file="https://putanumonit.files.wordpress.com/2016/12/good-drug-phack-labeled.png" data-orig-size="1308,843" data-permalink="https://putanumonit.com/2016/12/18/multiplicitous/good-drug-phack-labeled/" height="387" loading="lazy" sizes="(max-width: 601px) 100vw, 601px" src="https://putanumonit.files.wordpress.com/2016/12/good-drug-phack-labeled.png?w=601&amp;h=387" srcset="https://putanumonit.files.wordpress.com/2016/12/good-drug-phack-labeled.png?w=601&amp;h=387 601w, https://putanumonit.files.wordpress.com/2016/12/good-drug-phack-labeled.png?w=1202&amp;h=774 1202w, https://putanumonit.files.wordpress.com/2016/12/good-drug-phack-labeled.png?w=150&amp;h=97 150w, https://putanumonit.files.wordpress.com/2016/12/good-drug-phack-labeled.png?w=300&amp;h=193 300w, https://putanumonit.files.wordpress.com/2016/12/good-drug-phack-labeled.png?w=768&amp;h=495 768w, https://putanumonit.files.wordpress.com/2016/12/good-drug-phack-labeled.png?w=1024&amp;h=660 1024w" width="601"/>
+ </p>
+ <p>
+  We can see more separation in this case – since the awesome drug is at p=0.0005 for the entire group, hacking can not make it any worse (that’s where the tall green line is). Because for each drug the total cures are fixed, if one subgroup has more successes the other one by necessity have less. This mitigates the effects of p-hacking somewhat, but the null drug still gets to very low p-values some of the time.
+ </p>
+ <hr/>
+ <h2>
+  Reading the Fish
+ </h2>
+ <p>
+  So what does this all mean? Let’s use the rules we came up with to create a quick manual for interpreting
+  <a href="https://www.quora.com/How-can-you-tell-if-an-academic-paper-has-done-p-value-fishing" target="_blank">
+   fishy
+  </a>
+  statistics.
+ </p>
+ <ol>
+  <li>
+   <span style="color:#ff0000;">
+    <strong>
+     Check the
+     <a href="https://putanumonit.com/2016/04/17/022-power_skeptic/" style="color:#ff0000;" target="_blank">
+      power
+     </a>
+    </strong>
+   </span>
+   – If the result is based has a
+   <strong>
+    tiny sample size
+   </strong>
+   (especially with a noisy measure) disregard it and send an angry email to the author.
+  </li>
+  <li>
+   <strong>
+    <span style="color:#ff0000;">
+     Count the categories
+    </span>
+   </strong>
+   – If the result presented is for a subgroup of the total population tested (i.e. only green beans, only señoritas) you should count N – the
+   <strong>
+    total number of subgroups that could have been reported
+   </strong>
+   . Jelly beans come in
+   <a href="https://www.jellybelly.com/flavor-guides" target="_blank">
+    50 flavors
+   </a>
+   , gender/age/race combine in 60 subgroups, etc.
+  </li>
+  <li>
+   <strong>
+    <span style="color:#ff0000;">
+     Apply the correction
+    </span>
+   </strong>
+   – divide the original threshold p-value by the N you calculate above. If the result is in that range, it’s statistically significant.
+  </li>
+  <li>
+   <strong>
+    <span style="color:#ff0000;">
+     Stay skeptical
+    </span>
+   </strong>
+   – Remember that a p-hacked result isn’t as good of a signal even with correction, and that statistical significance doesn’t imply actual significance. Even an infinitesimal p-value doesn’t imply with certainty that the result is meaningful, per the Rule of Psi.
+  </li>
+ </ol>
+ <p class="rules">
+  <a href="http://slatestarcodex.com/2014/04/28/the-control-group-is-out-of-control/" target="_blank">
+   <strong>
+    Rule of Psi
+   </strong>
+  </a>
+  – A
+  <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2423692" target="_blank">
+   study of parapsychological ability to predict the future
+  </a>
+  produced a p-value of 0.00000000012. That number is only meaningful if you have absolute confidence that the study was perfect, otherwise you need to consider your
+  <a href="http://lesswrong.com/lw/3be/confidence_levels_inside_and_outside_an_argument/" target="_blank">
+   confidence
+   <em>
+    outside
+   </em>
+   the result itself
+  </a>
+  . If you think that for example there’s an
+  <strong>
+   ε
+  </strong>
+  chance that the result is completely fake, that
+  <strong>
+   ε
+  </strong>
+  is roughly the floor on p-values you should consider.
+ </p>
+ <p>
+  For example, if I think that at least 1 in 1,000 psychology studies have a fatal experimental flaw or are just
+  <a href="http://www.nytimes.com/2011/11/03/health/research/noted-dutch-psychologist-stapel-accused-of-research-fraud.html" target="_blank">
+   completely fabricated
+  </a>
+  , I would give any p-value below 1/1,000 about as much weight as 1/1,000. So there’s a 1.2*10^-10 chance that the parapsychology meta-analysis mentioned above was perfect and got a false positive result by chance, but at least 1 in 1,000 chance that one of the studies in it was bogus enough to make the result invalid.
+ </p>
+ <p>
+  Let’s apply our manual to the Eagles game:
+ </p>
+ <blockquote>
+  <p>
+   The Eagles are 10-0 against the spread since Dec 18, 2005 as an underdog and on turf after they’ve had more than 150 yards rushing last game.
+  </p>
+ </blockquote>
+ <p>
+  First of all, if someone tells you about a 10-0 streak you can assume that the actual streak is 10-1. If the Eagles had won the 11th game going back, the author would have surely said that the streak was 11-0!
+ </p>
+ <p>
+  The sample size of 11 is really small, but on the other hand in this specific case the error of the measure is 0 – we know perfectly well if the Eagles won or lost against the spread. This doesn’t happen in real life research, but when the error is 0 the
+  <em>
+   experimental power
+  </em>
+  is perfect and a small sample size doesn’t bother us.
+ </p>
+ <p>
+  What bother us is the insane number of possible variables the author could have mentioned. Instead of [Eagles / underdog / turf / after 150 yards rushing], the game could be described as [Seattle / at home / after road win / against team below average in passing] or [NFC East team / traveling west / against a team with a winning record] or [Team coming off home win / afternoon time slot / clear weather / opponent ranked top-5 in defense]. It’s hard to even count the possibilities, we can try putting them in separate bins and multiplying:
+ </p>
+ <ol>
+  <li>
+   Descriptors of home team – division, geography, record, result of previous game, passing/rushing/turnovers in previous game, any of the many season stats and rankings – at least 20
+  </li>
+  <li>
+   Descriptors of road team – at least 20
+  </li>
+  <li>
+   Game circumstances – weather, time slot, week of season, field condition, spread, travel, matchup history etc. – at least 10.
+  </li>
+ </ol>
+ <p>
+  Even if you pick just 1 descriptor in each category, this allows you to “test” more than 20*20*10 = 4,000 hypotheses. What does it mean for the Eagles? A 10-1 streak has a p-value of 0.0107, about 1/93. But we had 4,000 potential hypotheses! 1/93 is terrible compared to the p=1/4,000 we would have expected to see by chance alone.
+ </p>
+ <p>
+  Of course, this means that the gambling guru didn’t even bother testing all the options, he did just enough fishing to get a publishable number and published it. But with so much potential hacking, 10-1 is as much evidence
+  <strong>
+   against the Eagles
+  </strong>
+  as it is in their favor. The Eagles, a 6 point underdog, got their
+  <a href="http://www.nfl.com/gamecenter/2016112010/2016/REG11/eagles@seahawks#menu=gameinfo%7CcontentId%3A0ap3000000743302&amp;tab=recap" target="_blank">
+   asses kicked by 11 points
+  </a>
+  in Seattle.
+ </p>
+ <figure aria-describedby="caption-attachment-19451" class="wp-caption aligncenter" data-shortcode="caption" id="attachment_19451" style="width: 600px">
+  <img alt="trinity-ad" class="wp-image-19451 aligncenter" data-attachment-id="19451" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="trinity-ad" data-large-file="https://putanumonit.files.wordpress.com/2016/12/trinity-ad.jpg?w=845" data-medium-file="https://putanumonit.files.wordpress.com/2016/12/trinity-ad.jpg?w=300" data-orig-file="https://putanumonit.files.wordpress.com/2016/12/trinity-ad.jpg" data-orig-size="845,476" data-permalink="https://putanumonit.com/2016/12/18/multiplicitous/trinity-ad/" height="338" loading="lazy" sizes="(max-width: 600px) 100vw, 600px" src="https://putanumonit.files.wordpress.com/2016/12/trinity-ad.jpg?w=600&amp;h=338" srcset="https://putanumonit.files.wordpress.com/2016/12/trinity-ad.jpg?w=600&amp;h=338 600w, https://putanumonit.files.wordpress.com/2016/12/trinity-ad.jpg?w=150&amp;h=84 150w, https://putanumonit.files.wordpress.com/2016/12/trinity-ad.jpg?w=300&amp;h=169 300w, https://putanumonit.files.wordpress.com/2016/12/trinity-ad.jpg?w=768&amp;h=433 768w, https://putanumonit.files.wordpress.com/2016/12/trinity-ad.jpg 845w" width="600"/>
+  <figcaption class="wp-caption-text" id="caption-attachment-19451">
+   Advertisement poster for Trinity College
+  </figcaption>
+ </figure>
+ <p>
+  You can apply the category-counting method whenever the data you’re seeing seems a bit too
+  <em>
+   selected.
+  </em>
+  The ad above tells you that Trinity is highly ranked in “faculties combining research and instruction”. This narrow phrasing should immediately make you think of the dozens of other specialized categories in which Trinity College
+  <em>
+   isn’t
+  </em>
+  ranked anywhere near the top. A college ranked #1 overall  is a great college. A college ranked #1 in an overly specific category within an overly specific region is great at fishing.
+ </p>
+ <hr/>
+ <h2>
+  To No And
+ </h2>
+ <p>
+  It’s bad enough when people don’t notice that they’re being bamboozled by hacking, but digging deep to dredge up a narrow (and meaningless) result can sound more persuasive than a general result. Here’s an absolutely delightful example, from
+  <a href="https://soundcloud.com/the-bill-simmons-podcast/ep-141-mike-lombardi-joe-house-and-jacko#t=28:05" target="_blank">
+   Bill Simmons’ NFL gambling podcast
+  </a>
+  :
+ </p>
+ <blockquote>
+  <p>
+   <strong>
+    Joe House:
+   </strong>
+   I’m taking Denver. There’s one angle that I like. I like an angle.
+  </p>
+  <p>
+   <strong>
+    Bill:
+   </strong>
+   I’m waiting.
+  </p>
+  <p>
+   <strong>
+    Joe House:
+   </strong>
+   Defending Super Bowl champions, like the Denver Broncos, 24-2 against the spread since 1981 if they are on the road after a loss
+   <em>
+    and
+   </em>
+   matched up against a team that the previous week won both straight up
+   <em>
+    and
+   </em>
+   against the spread
+   <em>
+    and
+   </em>
+   the Super Bowl champion is not getting 7 or more points. This all applies to the Denver Broncos here, a wonderful nugget from my friend Big Al McMordie.
+  </p>
+  <p>
+   <strong>
+    Bill:
+   </strong>
+   *sigh* Oh my God.
+  </p>
+ </blockquote>
+ <p>
+  I’ve lost count of how many categories it took House to get to a 24-2 (clearly 24-3 in reality) statistic. What’s impressive is how House sounds more excited with each
+  <span style="color:#ff0000;">
+   <em>
+    “and”
+   </em>
+  </span>
+  he adds to the description of the matchup. To me, each new category decreases the likelihood that the result is meaningful by multiplying the number of prior possibilities. To House, it seems like Denver fitting in such an overly specific description is a coincidence that further reinforces the result.
+ </p>
+ <p>
+  This is called the conjunction fallacy. I’ll let
+  <a href="http://lesswrong.com/lw/jk/burdensome_details/" target="_blank">
+   Eliezer explain
+  </a>
+  :
+ </p>
+ <blockquote>
+  <p>
+   The
+   <a href="http://lesswrong.com/lw/ji/conjunction_fallacy/">
+    conjunction fallacy
+   </a>
+   is when humans rate the probability P(A&amp;B) higher than the probability P(B), even though it is a theorem that P(A&amp;B) &lt;= P(B).  For example, in one experiment in 1981, 68% of the subjects ranked it more likely that “Reagan will provide federal support for unwed mothers and cut federal support to local governments” than that “Reagan will provide federal support for unwed mothers.” […]
+  </p>
+  <p>
+   Which is to say:  Adding detail can make a scenario SOUND MORE PLAUSIBLE, even though the event necessarily BECOMES LESS PROBABLE. […]
+  </p>
+  <p>
+   In the
+   <a href="http://lesswrong.com/lw/ji/conjunction_fallacy/">
+    1982 experiment
+   </a>
+   where professional forecasters assigned systematically higher probabilities to “Russia invades Poland, followed by suspension of diplomatic relations between USA and USSR” versus “Suspension of diplomatic relations between USA and USSR”, each experimental group was only presented with one proposition. […]
+  </p>
+  <p>
+   What could the forecasters have done to avoid the conjunction fallacy, without seeing the direct comparison, or even knowing that anyone was going to test them on the conjunction fallacy?  It seems to me, that they would need to notice the word
+   <span style="color:#ff0000;">
+    <strong>
+     “and”
+    </strong>
+   </span>
+   .  They would need to be wary of it – not just wary, but leap back from it.  Even without knowing that researchers were afterward going to test them on the conjunction fallacy particularly.  They would need to notice the conjunction of
+   <em>
+    two entire details,
+   </em>
+   and be
+   <em>
+    shocked
+   </em>
+   by the audacity of anyone asking them to endorse such an insanely complicated prediction.
+  </p>
+ </blockquote>
+ <p>
+  Is someone selling you a drug that works only when the patient is old
+  <span style="color:#ff0000;">
+   and
+  </span>
+  a woman
+  <span style="color:#ff0000;">
+   and
+  </span>
+  Hispanic? A football team that is an underdog
+  <span style="color:#ff0000;">
+   and
+  </span>
+  on turf
+  <span style="color:#ff0000;">
+   and
+  </span>
+  good at rushing? One “and” is a warning sign, two “ands” is a billboards spelling BULLSHIT in flashing red lights.
+  <a href="https://www.researchgate.net/publication/274458966_Review_and_Summary_of_Research_on_the_Embodied_Effects_of_Expansive_vs_Contractive_Nonverbal_Displays" target="_blank">
+   How about 11 “ands”
+  </a>
+  ?
+ </p>
+ <p>
+  11 “ands” is a level of bullshit that can only be found in one stinky stall of the washrooms of science, the gift that keeps on giving, the old faithful: power posing. After power posing decisively failed to replicate in an experiment with 5 times the original sample size, the authors of the original study listed 11 ways in which the experimental setup of the replication differed from the original (
+  <a href="https://www.researchgate.net/publication/274458966_Review_and_Summary_of_Research_on_the_Embodied_Effects_of_Expansive_vs_Contractive_Nonverbal_Displays" target="_blank">
+   Table 2 here
+  </a>
+  ). These differences include: time in poses (6 minutes in replication vs. 2 minutes in the original), country (Switzerland vs. US), filler task (word vs. faces) and 8 more. The authors claim that
+  <em>
+   any one
+  </em>
+  of the differences could account for the failure of replication.
+ </p>
+ <p>
+  What’s wrong with this argument? Let’s consider what it would mean for the
+  <em>
+   argument to be true
+  </em>
+  . If it’s true that any of the 11 changes to the original setup could destroy the power posing effect, it means that the power posing effect only exists in that very specific setup. I.e. power posing only works when the pose is held for 2 minutes
+  <span style="color:#ff0000;">
+   and
+  </span>
+  only for Americans
+  <span style="color:#ff0000;">
+   and
+  </span>
+  only after a verbal task
+  <span style="color:#ff0000;">
+   and 8 more ands
+  </span>
+  . If power posing requires so many conjunctions, it was less probable to start with than
+  <a href="https://putanumonit.com/2016/11/02/year-1-redux-poseur/" target="_blank">
+   the chance of Amy Cuddy admitting that power posing isn’t real
+  </a>
+  .
+ </p>
+ <p>
+  <a href="https://en.wikipedia.org/wiki/Yes,_and..." target="_blank">
+   The first rule of improv comedy is “Yes, and…”
+  </a>
+  The first rule of statistical skepticism is “And…,no.”
+ </p>
+ <p class="rules">
+  <strong>
+   Rule of And…, no
+  </strong>
+  – When someone says “and”, you say “no”.
+ </p>
+ <div class="sharedaddy sd-like-enabled sd-sharing-enabled" id="jp-post-flair">
+  <div class="sharedaddy sd-sharing-enabled">
+   <div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing">
+    <h3 class="sd-title">
+     Share this:
+    </h3>
+    <div class="sd-content">
+     <ul>
+      <li class="share-facebook">
+       <a class="share-facebook sd-button share-icon no-text" data-shared="sharing-facebook-3415" href="https://putanumonit.com/2016/12/18/multiplicitous/?share=facebook" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Facebook">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Facebook (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-twitter">
+       <a class="share-twitter sd-button share-icon no-text" data-shared="sharing-twitter-3415" href="https://putanumonit.com/2016/12/18/multiplicitous/?share=twitter" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Twitter">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Twitter (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-pocket">
+       <a class="share-pocket sd-button share-icon no-text" data-shared="" href="https://putanumonit.com/2016/12/18/multiplicitous/?share=pocket" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Pocket">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Pocket (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-reddit">
+       <a class="share-reddit sd-button share-icon no-text" data-shared="" href="https://putanumonit.com/2016/12/18/multiplicitous/?share=reddit" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Reddit">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Reddit (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-tumblr">
+       <a class="share-tumblr sd-button share-icon no-text" data-shared="" href="https://putanumonit.com/2016/12/18/multiplicitous/?share=tumblr" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Tumblr">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Tumblr (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-email">
+       <a class="share-email sd-button share-icon no-text" data-shared="" href="https://putanumonit.com/2016/12/18/multiplicitous/?share=email" rel="nofollow noopener noreferrer" target="_blank" title="Click to email this to a friend">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to email this to a friend (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-end">
+      </li>
+     </ul>
+    </div>
+   </div>
+  </div>
+  <div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded" data-name="like-post-frame-101823629-3415-6010a82b69694" data-src="//widgets.wp.com/likes/index.html?ver=20200826#blog_id=101823629&amp;post_id=3415&amp;origin=putanumonit.wordpress.com&amp;obj_id=101823629-3415-6010a82b69694&amp;domain=putanumonit.com" id="like-post-wrapper-101823629-3415-6010a82b69694">
+   <h3 class="sd-title">
+    Like this:
+   </h3>
+   <div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px;">
+    <span class="button">
+     <span>
+      Like
+     </span>
+    </span>
+    <span class="loading">
+     Loading...
+    </span>
+   </div>
+   <span class="sd-text-color">
+   </span>
+   <a class="sd-link-color">
+   </a>
+  </div>
+  <div class="jp-relatedposts" id="jp-relatedposts">
+   <h3 class="jp-relatedposts-headline">
+    <em>
+     Related
+    </em>
+   </h3>
+  </div>
+ </div>
+</div>

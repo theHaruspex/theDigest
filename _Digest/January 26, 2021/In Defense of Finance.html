@@ -1,0 +1,897 @@
+<h1>
+<meta charset="utf-8">
+ In Defense of Finance
+</h1>
+<h2>
+</h2>
+<i>
+ Published December 14, 2018 on Put A Number On It!.
+</i>
+<div class="entry-content">
+ <p>
+  Alternative title:
+  <strong>
+   The finance industry, mortgage-backed securities, bank bailouts, risk-weighted assets, and equity ratios: much more than you wanted to know.
+  </strong>
+ </p>
+ <p>
+  Also: you get to find out what I actually do for a living.
+ </p>
+ <p>
+  Epistemic status: I look forward to
+  <a href="https://meta.wikimedia.org/wiki/Cunningham%27s_Law" rel="noopener" target="_blank">
+   learning a lot from the comments
+  </a>
+  .
+ </p>
+ <h2>
+  Galaxy Brain
+ </h2>
+ <p>
+  13 billion years ago the first galaxies started forming, followed soon after by
+  <a href="https://knowyourmeme.com/memes/expanding-brain" rel="noopener" target="_blank">
+   the galaxy brain meme
+  </a>
+  . Sometime in between, Scott Alexander wrote about the root of galaxy-brainism: the irresistible urge to signal intelligence by adopting
+  <a href="https://www.lesswrong.com/posts/9kcTNWopvXFncXgPy/intellectual-hipsters-and-meta-contrarianism" rel="noopener" target="_blank">
+   meta-contrarian positions
+  </a>
+  . This urge is so strong that it is nearly impossible to find an issue where people up-and-down different levels of education and left-and-right on the political spectrum agree with each other.
+  <i>
+   Nearly
+  </i>
+  impossible.
+ </p>
+ <p>
+  Dropout or Ph.D., Trumper or Berniebro, everyone seems to hate the financial industry. People signal intelligence or political affiliation not by having different attitudes towards finance, but by using different buzzwords to explain why bankers are evil and should be fired/jailed/
+  <a href="https://tvtropes.org/pmwiki/pmwiki.php/Main/EatTheRich" rel="noopener" target="_blank">
+   eaten
+  </a>
+  .
+ </p>
+ <p>
+  <img alt="bankers are bad" class="size-full wp-image-29168 aligncenter" data-attachment-id="29168" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"1"}' data-image-title="bankers are bad" data-large-file="https://putanumonit.files.wordpress.com/2018/12/bankers-are-bad1.jpg?w=500" data-medium-file="https://putanumonit.files.wordpress.com/2018/12/bankers-are-bad1.jpg?w=214" data-orig-file="https://putanumonit.files.wordpress.com/2018/12/bankers-are-bad1.jpg" data-orig-size="500,701" data-permalink="https://putanumonit.com/2018/12/14/defense-of-finance/bankers-are-bad/" sizes="(max-width: 500px) 100vw, 500px" src="https://putanumonit.files.wordpress.com/2018/12/bankers-are-bad1.jpg?w=900" srcset="https://putanumonit.files.wordpress.com/2018/12/bankers-are-bad1.jpg 500w, https://putanumonit.files.wordpress.com/2018/12/bankers-are-bad1.jpg?w=107 107w, https://putanumonit.files.wordpress.com/2018/12/bankers-are-bad1.jpg?w=214 214w"/>
+ </p>
+ <p>
+  To the consternation of all the brains pictured above, the only people who seem to respect finance are those with any real power. Tech companies have enough cash not to worry what bankers think of them, and yet it’s quite rare to hear a tech CEO criticize Wall Street. Voters on both sides of the spectrum hate bank bailouts, and yet presidents from both parties keep bailing banks out. Even Trump, who has appointed
+  <a href="https://www.politico.com/story/2018/09/19/michael-flynn-sentencing-mueller-830724" rel="noopener" target="_blank">
+   criminals
+  </a>
+  and
+  <a href="https://www.forbes.com/sites/dianahembree/2018/11/09/scam-company-advised-by-matthew-whitaker-threatened-victims-but-many-filed-complaints-anyway/#332359b41afa" rel="noopener" target="_blank">
+   scammers
+  </a>
+  to every post in the cabinet, was convinced to pick a moderate and well regarded professional to chair
+  <a href="https://en.wikipedia.org/wiki/Jerome_Powell" rel="noopener" target="_blank">
+   the Federal Reserve
+  </a>
+  .
+ </p>
+ <p>
+  <i>
+   “They’re all in the bankers’ pockets”
+  </i>
+  lacks explanatory power. Rich and powerful people spend most of their energy fighting other rich and powerful people, not
+  <a href="http://slatestarcodex.com/2014/09/14/does-class-warfare-have-a-free-rider-problem/" rel="noopener" target="_blank">
+   altruistically conspiring with them
+  </a>
+  . And the finance industry isn’t even that rich. Johnson &amp; Johnson is bigger than any bank in the world, why aren’t the rich and powerful in the pocket of Big Band-Aid?
+ </p>
+ <p>
+  I have an alternative explanation:
+  <i>
+   Finance is the miracle glue that keeps our civilization intact. No one understands exactly how it works, so fucking with it in any way should be terrifying.
+  </i>
+  <i>
+   People in power can see that.
+  </i>
+ </p>
+ <p>
+  I see scowling faces when I propose this explanation, or when I suggest that finance is important and bankers are doing useful work. The confidence with which people proclaim that finance is parasitic and worthless is
+  <a href="https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect" rel="noopener" target="_blank">
+   in direct proportion
+  </a>
+  to their ignorance of any theory or facts pertaining to the financial industry.
+ </p>
+ <p>
+  There’s a lot I don’t know about finance. I don’t know which complex criticism of finance are correct, but I know which simple ones aren’t. I will list some basic facts, do some basic math, and present a basic model of what finance does. Any criticism of the finance industry should at least address these basics. A lot of them don’t, and that includes books written by economists, not just Twitter trolls.
+ </p>
+ <p>
+  The goal of this post is to push you up the Dunning-Kruger curve towards less ignorance about the finance, less reflexive hatred of it, less confidence that you know how to “fix” it.
+ </p>
+ <p>
+  Welcome to the galaxy brain.
+ </p>
+ <p>
+  <img alt="cosmic suit banker" class="size-full wp-image-29180 aligncenter" data-attachment-id="29180" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="cosmic suit banker" data-large-file="https://putanumonit.files.wordpress.com/2018/12/cosmic-suit-banker.png?w=900" data-medium-file="https://putanumonit.files.wordpress.com/2018/12/cosmic-suit-banker.png?w=300" data-orig-file="https://putanumonit.files.wordpress.com/2018/12/cosmic-suit-banker.png" data-orig-size="2000,1125" data-permalink="https://putanumonit.com/2018/12/14/defense-of-finance/cosmic-suit-banker/" sizes="(max-width: 900px) 100vw, 900px" src="https://putanumonit.files.wordpress.com/2018/12/cosmic-suit-banker.png?w=900" srcset="https://putanumonit.files.wordpress.com/2018/12/cosmic-suit-banker.png?w=900 900w, https://putanumonit.files.wordpress.com/2018/12/cosmic-suit-banker.png?w=1800 1800w, https://putanumonit.files.wordpress.com/2018/12/cosmic-suit-banker.png?w=150 150w, https://putanumonit.files.wordpress.com/2018/12/cosmic-suit-banker.png?w=300 300w, https://putanumonit.files.wordpress.com/2018/12/cosmic-suit-banker.png?w=768 768w, https://putanumonit.files.wordpress.com/2018/12/cosmic-suit-banker.png?w=1024 1024w"/>
+ </p>
+ <h2>
+  The Parable of Banksy
+ </h2>
+ <p>
+  Imagine a world made up of two villages, a week’s ride apart. Maysville, where corn is grown and eaten, and Cottonton, which produces cotton. The resident of both villages work diligently, but their lives aren’t great. The Maysians eat well but have nothing to wear but tunics stitched of corn leaves; the Cottonites have good fabric but meager lunches.
+ </p>
+ <p>
+  There’s one Maysvillian,
+  <a href="https://hanguppictures.com/artists/banksy/banksy-signed-prints/festival-destroy-capitalism" rel="noopener" target="_blank">
+   Banksy
+  </a>
+  , who just sucks at growing corn. At harvest, he barely has enough cobs to fill a single cart. But then Banksy has an idea. He takes the cart and rides out of Maysville, returning after a fortnight with a cart full of t-shirts, jeans, and underwear. The Maysians are happy to trade huge amounts of the corn they don’t need for a pair of MeUndies. After a few trips, Banksy has as much corn as the best farmers in town.
+ </p>
+ <p>
+  Some of the older farmers sneer at the young entrepreneur. “In my day, to get a silo full of grain you had to pull it out of the ground yourself”, they mutter. “What did
+  <i>
+   you
+  </i>
+  do to deserve your riches?”
+ </p>
+ <p>
+  “I took on price risk and foreign exchange risk in connecting our village to geographically diverse markets”, replies Banksy.
+ </p>
+ <p>
+  “Sounds like a scam”, say the elders.
+ </p>
+ <p>
+  A while later, two women named Tori and Tilly are walking around Maysville telling everyone about a new idea they came up with. Instead of eating the corn raw, they could dry and mill it into flour, then bake it in flat circles. They named it after themselves: a tortilla. Unfortunately, the tortillas so far are hypothetical: Tori and Tilly don’t have enough corn to pay builders to construct a corn mill, and no one in Maysville is willing to work for free.
+ </p>
+ <p>
+  Banksy comes with a proposition: he will lend the two women 10 bushels to pay the laborers, and they pay him back 20 bushels when their tortillery is set up. Tori and Tilly agree, and soon Maysville is booming with baked delicacies of every sort from nachos to cornbread. Unfortunately, Tori and Tilly go out of business after
+  <a href="https://www.huffingtonpost.com/entry/portland-burrito-cart-closes-after-owners-are-accused-of-cultural-appropriation_us_5926ef7ee4b062f96a348181" rel="noopener" target="_blank">
+   an angry mob accuses them of cultural appropriation
+  </a>
+  .
+ </p>
+ <p>
+  Banksy is richer than ever, and the elders are angrier than ever. “You used to pull your cart, now you get rich just by sitting around!” they shout.
+ </p>
+ <p>
+  “I took on time risk and credit risk by allowing our village to trade not just across geographies, but also across time,” says Banksy. “We are 99%!” the elders keep screaming
+  <a href="https://twitter.com/dril/status/134787490526658561?lang=en" rel="noopener" target="_blank">
+   as they slowly shrink and transform into corn cobs
+  </a>
+  .
+ </p>
+ <p>
+  This is ultimately what finance does. It’s the intermediary that allows people to trade across time and space, and the party that assumes many of the risks inherent in this trade.
+ </p>
+ <h2>
+  Finance is a Coordinating Intermediary
+ </h2>
+ <p>
+  You may notice that it takes 1 intermediary to connect 2 villages, but 100 nodes
+  <a href="https://simple.wikipedia.org/wiki/Network_topology#Mesh" rel="noopener" target="_blank">
+   have 4950 potential connections
+  </a>
+  . A billion people have half a quintillion potential connections. The more actors participate in the global economy, the more middlemen it takes to connect them. The value of making those connections increases as well, as does the risk. As the global economy becomes more integrated we should see three things happening, and they do:
+ </p>
+ <ol id="bfoot1">
+  <li>
+   Finance, insurance and trading take up
+   <a href="https://blogs.wsj.com/economics/2011/12/10/number-of-the-week-finances-share-of-economy-continues-to-grow/" rel="noopener" target="_blank">
+    a larger share of the global economy
+   </a>
+   .
+  </li>
+  <li>
+   Finance becomes riskier, more lucrative, and more unequal with greater rewards going to the winners.
+   <a href="#foot1">
+    [1]
+   </a>
+  </li>
+  <li>
+   <a href="https://ourworldindata.org/grapher/declining-global-poverty-share-1820-2015" rel="noopener" target="_blank">
+    Everyone in the world gets more prosperous
+   </a>
+   .
+  </li>
+ </ol>
+ <p>
+  This is what financial institutions do and how they make money. Goldman Sachs doesn’t rob people at gunpoint, it gets paid by willing clients to provide a service. Finance create value by connecting people: companies to investors, depositors to lenders,
+  <a href="https://www.cmegroup.com/trading/agricultural/grain-and-oilseed/corn.html" rel="noopener" target="_blank">
+   corn buyers today to corn sellers next year
+  </a>
+  . You can argue that risks are not worth the rewards or that inequality is not worth the prosperity, but that doesn’t erase the value that finance provides.
+ </p>
+ <p>
+  Take the most vilified financial innovation of the past few decades – the
+  <a href="https://www.investopedia.com/terms/m/mbs.asp" rel="noopener" target="_blank">
+   mortgage-backed security
+  </a>
+  . It’s built on a simple idea: instead of making an all-or-nothing bet that a single family will pay off their house by issuing a single mortgage, a bank can package 10,000 mortgages together into an MBS and you buy a piece of that, equivalent to making a bet that at least X% of the mortgages will get paid.
+ </p>
+ <p>
+  This is a really good bet when X is 10% or 40% or even 80%. But if X is 95% and all you own are crappy MBS,
+  <a href="https://fred.stlouisfed.org/series/DRSFRMACBS" rel="noopener" target="_blank">
+   it takes just 5%
+  </a>
+  of American borrowers defaulting on their mortgages at once to blow your shit up. This is what happened to Lehman Brothers and AIG, and it’s how we got a financial crisis.
+ </p>
+ <p>
+  It’s very tempting to draw the lesson from this that MBS are useless and risky, or that they’re a scam invented by greedy bankers to steal money.
+ </p>
+ <p>
+  But we can look at MBS as a solution to a coordination problem. There are 10,000 families who want to move into a house today and pay for it over a couple of decades. There are 10,000 construction workers who want to build a house today and get paid for it today. There are 10,000 investors who want to invest some money today and get a return in the future.
+ </p>
+ <p>
+  Those 30,000 people don’t live in the same city, the same country, or even in the same decade. Even if we could magically teleport them to the same (very large) room, they would not be able to coordinate a solution. How would they trust each other to do their part? Who would track how much money needs to get paid to whom and at what time?
+ </p>
+ <p>
+  Mortgage-backed securities are the solution to this seemingly impossible coordination problem. Without MBS fewer people would live in the houses they want, fewer construction workers will have a job, and investors will get worse returns on their hard-earned savings. The banks who securitize mortgages are in competition with each other and as a result, they capture only a small part of the surplus MBS create for all involved.
+ </p>
+ <p>
+  Any deal like this carries inherent risk since any subset of the 30,000 can mess things up for everyone else. Investors may pull their money, construction companies may build the wrong houses in the wrong geographies, tenants may default on their mortgages. This risk is unavoidable, and it’s very hard to figure out exactly how much risk was involved, and where it was concentrated. In 2008, the answers turned out to be: “way more risk than we thought” and “concentrated in a few huge and interconnected institutions that may need a
+  <i>
+   bailout
+  </i>
+  to survive”.
+ </p>
+ <p>
+  If the story so far has been relatively uncontroversial, the opposite is true when we get to the B-word. Fasten your seatbelts.
+ </p>
+ <h2>
+  What’s in a Bailout
+ </h2>
+ <p>
+  The sanity of conversations about the bailout got off to bad start right away. As the
+  <a href="https://en.wikipedia.org/wiki/Emergency_Economic_Stabilization_Act_of_2008" rel="noopener" target="_blank">
+   Emergency Economic Stabilization Act
+  </a>
+  was debated in Congress,
+  <a href="https://en.wikipedia.org/wiki/Emergency_Economic_Stabilization_Act_of_2008#The_public" rel="noopener" target="_blank">
+   Americans supported the bill by a 27% margin
+  </a>
+  when it was presented as
+  <i>
+   “the government is potentially investing billions to try and keep financial institutions and markets secure”
+  </i>
+  and
+  <strong>
+   opposed the same exact bill by a 24% margin
+  </strong>
+  when it was phrased as
+  <i>
+   “the government should use taxpayers’ dollars to rescue ailing private financial firms whose collapse could have adverse effects on the economy and market”
+  </i>
+  . Very few of the people expressing their opinion bothered to read the 451 pages of the law, and the same is true of many of the congresspeople who voted on it.
+ </p>
+ <p>
+  Where do I stand?
+  <a href="https://en.wikipedia.org/wiki/I_know_that_I_know_nothing" rel="noopener" target="_blank">
+   I stand with Socrates
+  </a>
+  . The financial system is so complex and anti-inductive that predicting the effects of major interventions in it is beyond mortal comprehension. The political system is so complex and anti-inductive that predicting the effects of major interventions it enacts is beyond mortal comprehension. Bailouts are a major intervention in the financial system enacted by the political system. Predicting the effects… Ah hell, let’s at least try.
+ </p>
+ <p>
+  The argument in favor of financial bailouts is that the financial system relies on confidence, and confidence is a resource that can be cheaply manufactured by the government.
+ </p>
+ <p id="fdic">
+  Banks are vulnerable to negative feedback loops where temporary setbacks cause permanent damage. If a few depositors lose faith in a bank and withdraw their deposits at once, the bank has less money available to pay other depositors, which in turn causes
+  <i>
+   them
+  </i>
+  to lose faith and withdraw their funds, and so on until the bank collapses in a
+  <a href="https://en.wikipedia.org/wiki/Bank_run" rel="noopener" target="_blank">
+   bank run
+  </a>
+  . The government can easily put a break on this process by promising depositors that they
+  <a href="https://en.wikipedia.org/wiki/Federal_Deposit_Insurance_Corporation" rel="noopener" target="_blank">
+   will always get their money back
+  </a>
+  . Once depositors are sure they can withdraw their deposits, they don’t feel the need to.
+ </p>
+ <p>
+  A similar thing happens in
+  <a href="https://en.wikipedia.org/wiki/Liquidity_crisis" rel="noopener" target="_blank">
+   a liquidity crisis
+  </a>
+  , such as the one in 2008. When banks lose access to loans they can’t finance their own lending in turn, and the market for credit can collapse in a runaway process. Again, the government can provide credibility and prevent the death spiral by being the lender of last resort. Confidence is created by credibility, and as long as the government is stable, solvent, and able to print money, it has the credibility to inject confidence into a panicky financial system without much cost to itself.
+ </p>
+ <p>
+  There are two main arguments against government bailouts of banks.
+ </p>
+ <p>
+  The first is
+  <a href="https://en.wikipedia.org/wiki/Moral_hazard" rel="noopener" target="_blank">
+   moral hazard
+  </a>
+  : if banks are protected from the downsides of making bad investments by an implicit government guarantee, they will make dumber and riskier investments. Had banks known they wouldn’t be bailed out in 2008 they wouldn’t have kept stuffing their balance sheets with explosive subprime MBS. But they knew, so they did.
+ </p>
+ <p>
+  I think that the general version of this argument is certainly true. But the particular case of subprime mortgages that’s so often cited as an example of moral hazard probably has little to do with it.
+ </p>
+ <p>
+  The crash of subprime MBS seems obvious in hindsight, but at the time the number of
+  <a href="https://www.investopedia.com/articles/investing/020115/big-short-explained.asp" rel="noopener" target="_blank">
+   people making bets against these instruments
+  </a>
+  was very small. The most famous of those,
+  <a href="https://en.wikipedia.org/wiki/Michael_Burry" rel="noopener" target="_blank">
+   Michael Burry
+  </a>
+  , couldn’t even convince his own investors that MBS are too risky and had to enforce a moratorium on withdrawals to keep his hedge fund solvent. The groupthink that gripped everyone else, from mortgage lenders to bank traders to rating agencies, was too pervasive to be overcome by institutional incentives.
+ </p>
+ <p>
+  <i>
+   Never attribute to malice that which is adequately explained by stupidity
+  </i>
+  ,
+  <a href="https://en.wikipedia.org/wiki/Hanlon%27s_razor" rel="noopener" target="_blank">
+   goes the saying
+  </a>
+  . If scientists can’t avoid p-hacking their own clean and simple data, it’s too much to expect of bankers to decipher their doom in the entrails of MBS prospectuses.
+ </p>
+ <p>
+  Moral hazard is also an unavoidable result of the principal-agent problem. Banks exist for the benefit of their shareholders, and bank
+  <a href="https://www.tradingview.com/symbols/SP-SPF/" rel="noopener" target="_blank">
+   shareholders lost more than 80%
+  </a>
+  (!) between the peak of May 2007 and the nadir of February 2009. Why didn’t the shareholders make the banks figure out that MBS are too risky to invest in? Shareholders can only influence the board, which directs the CEO, who manages several layers of directors before getting to the risk analysts whose job it is to figure out MBS. If that person didn’t do their job in 2007, expectations of a bailout likely had little to do with it.
+ </p>
+ <p>
+  The second argument against bailouts is that they put Washington in bed with Wall Street. This is really a naive argument. Bailout or no bailout, government and finance aren’t just friends with benefits, they’re conjoined twins.
+ </p>
+ <p>
+  Most of what governments do is a financial coordination problem: taking money from some citizens and redistributing it or spending it on collective projects. For as long as banks have existed, governments used them for those purposes. In July 2015 the UK government
+  <a href="https://www.gov.uk/government/news/repayment-of-26-billion-historical-debt-to-be-completed-by-government" rel="noopener" target="_blank">
+   finally finished paying off
+  </a>
+  government liabilities arising from investments in the South Sea Company in 1720 and loans taken to finance wars in 1754.
+ </p>
+ <p>
+  As for banks, the government isn’t only their largest counterparty but also the provider of the legal system that underpins finance, the issuer of regulations, and the ones who actually print the money. There no finance that stands apart of politics, and no politics that is independent of finance.
+ </p>
+ <p>
+  So what to make of all this? Moral hazard and Washington-Wall Street incest exist with or without bailouts. Bailouts certainly don’t make these two issues better, but there’s value in the government providing the confidence that banking requires same as it provides any other vital infrastructure.
+ </p>
+ <p>
+  I think that some sort of government backing for the financial system is good in theory. In practice, since having a sane and informed national conversation on bailouts is impossible, we ended up with the worst of all worlds.
+ </p>
+ <p>
+  <a href="https://www.rollingstone.com/politics/politics-news/secrets-and-lies-of-the-bailout-113270/" rel="noopener" target="_blank">
+   What happened in 2008/09
+  </a>
+  is that the actual bailout turned out to be an order of magnitude larger than the bill Congress voted on, it was lied about and covered up by both politicians and bankers, it made the too-big-to-fail even bigger and more failure prone while simultaneously undercutting more prudent competitors, and it destroyed public confidence in the financial system instead of reinforcing it.
+ </p>
+ <p>
+  I don’t think that anyone actually aimed for this outcome. Instead, in the absence of consensus or even dialogue, the politicians, bankers, and the Fed just followed their instincts and short-term interests. There are no guaranteed ways to succeed in finance, but gut-based short-termism is a guarantee of failure.
+ </p>
+ <p>
+  And yet, even after that fiasco, the financial system keeps chugging along. Houses get built, mortgages get paid, retirees retire. No matter how bad that bailout was, I’m still not sure the counterfactual is better.
+ </p>
+ <h2>
+  Experts and Equity
+ </h2>
+ <p>
+  The financial system is not perfect but it’s not terrible either, and I don’t think we could redesign it from scratch to improve it without risk. If we have ideas on how to improve it, we should try them out carefully and incrementally.
+ </p>
+ <p>
+  But maybe I just don’t have enough degrees in economics to figure out a better system to coordinate money flows across continents and centuries. Quite a few people with the requisite number of degrees seem to think it’s easy.
+ </p>
+ <p>
+  Anat Admati and Martin Hellwig are professors of economics, and they wrote
+  <i>
+   <a href="http://bankersnewclothes.com/" rel="noopener" target="_blank">
+    The Banker’s New Clothes
+   </a>
+  </i>
+  <i>
+   ,
+  </i>
+  a book about what’s wrong with the banking system and how to fix it with “specific and highly beneficial steps that can be taken immediately”. John H. Cochrane is a professor of economics at Chicago, which is like being a professor of economics but more so.
+  <strong>
+   <a href="https://johnhcochrane.blogspot.com/2013/03/the-bankers-new-clothes-review.html" rel="noopener" target="_blank">
+    He wrote a review
+   </a>
+  </strong>
+  of the book that appeared in the Wall Street Journal and on my Facebook wall with a ringing endorsement.
+ </p>
+ <blockquote>
+  <p>
+   The central problem, at the core of Anat Admati and Martin Hellwig’s “The Bankers’ New Clothes,” is capital. In order to make $100 of loans,
+   <strong>
+    a typical bank
+   </strong>
+   borrows $97—from depositors, from money-market funds, from other banks, or from bondholders—and sells $3 of stock, its “capital.” So if only 4% of the bank’s loans fail, the shareholders are wiped out, and the bank cannot pay its debts. […]
+  </p>
+ </blockquote>
+ <p>
+  Three eminent professors explain that the problem with banking is that the typical bank holds enough equity to cover only 3% of its assets and that this number is falling. As Cochrane was writing those words, in March 2013, the average equity ratio of US banks was 11.2%, up from 6% in the late 1980s.
+ </p>
+ <p>
+  <img alt="equity assets" class="size-full wp-image-29176 aligncenter" data-attachment-id="29176" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="equity assets" data-large-file="https://putanumonit.files.wordpress.com/2018/12/equity-assets.png?w=900" data-medium-file="https://putanumonit.files.wordpress.com/2018/12/equity-assets.png?w=300" data-orig-file="https://putanumonit.files.wordpress.com/2018/12/equity-assets.png" data-orig-size="1449,526" data-permalink="https://putanumonit.com/2018/12/14/defense-of-finance/equity-assets/" sizes="(max-width: 900px) 100vw, 900px" src="https://putanumonit.files.wordpress.com/2018/12/equity-assets.png?w=900" srcset="https://putanumonit.files.wordpress.com/2018/12/equity-assets.png?w=900 900w, https://putanumonit.files.wordpress.com/2018/12/equity-assets.png?w=150 150w, https://putanumonit.files.wordpress.com/2018/12/equity-assets.png?w=300 300w, https://putanumonit.files.wordpress.com/2018/12/equity-assets.png?w=768 768w, https://putanumonit.files.wordpress.com/2018/12/equity-assets.png?w=1024 1024w, https://putanumonit.files.wordpress.com/2018/12/equity-assets.png 1449w"/>
+ </p>
+ <p>
+  Let me repeat that: economics professors who wrote a book about how raising equity ratios will solve the problem of financial crises
+  <strong>
+   got the actual equity ratio for banks,
+  </strong>
+  a number that is publicly reported and easily googlable,
+  <strong>
+   wrong by a factor of 4.
+  </strong>
+  You can’t make this shit up.
+ </p>
+ <p>
+  Unless you’re an economics professor, in which case you can make up whatever you want:
+ </p>
+ <blockquote>
+  <p>
+   What about those “tough” new capital regulations that you keep reading about? They are not nearly as tough as you think. At best, the new Basel III international bank regulation agreement calls for a 7% ratio of capital to assets by a leisurely 2019 deadline. But that is the ratio of capital to “risk-weighted” assets. Risk-weighting is a complex system in which some assets count less against capital requirements than others. A dollar of mortgage assets might count as 50 cents, but it might count as 10 cents or less if it is a complex mortgage-backed security, and zero if it is government debt. When Ms. Admati and Mr. Hellwig unravel those “risk weights,” we’re still talking about 2% to 3% actual capital.
+  </p>
+ </blockquote>
+ <p>
+  Do you keep reading about new capital regulations? I bet you don’t.
+ </p>
+ <p>
+  You know who else has not done any reading about the new capital regulations? John Cochrane.
+ </p>
+ <p>
+  How can I tell? Because every single number he quotes in that paragraph is wrong.
+ </p>
+ <p>
+  Why do I know that? Because my job since 2013 was turning the tough new capital regulations into software and helping banks implement them. If you want to do some reading about capital regulations they are
+  <a href="https://www.ecfr.gov/cgi-bin/text-idx?SID=3707cc5281d649a29ed64ff333cf6156&amp;mc=true&amp;tpl=/ecfrbrowse/Title12/12cfr217_main_02.tpl" rel="noopener" target="_blank">
+   all listed on the Federal Register
+  </a>
+  . But you don’t have to, I have the entire thing memorized.
+ </p>
+ <p>
+  Let’s see if I can rewrite that paragraph:
+ </p>
+ <blockquote>
+  <p>
+   At worst, the Basel III agreement calls for an 8% ratio of capital to assets, while allowing national regulators to impose 2.5% on top of that. The 7% ratio is for a specific subset of capital, an extra requirement to provide extra security. This has been fully implemented in almost all major jurisdictions, including the US, between 2013-2018. Risk-weighting is a not-so-complex system, even Jacob could figure it out. A dollar of mortgage assets counts as 50 cents only if it adheres to strict prudent loan standards, it counts as a full dollar otherwise. If it is a complex mortgage-backed security it might count as much as $12.5 (a 1250% risk weight) unless it’s a very safe senior tranche.
+  </p>
+ </blockquote>
+ <p>
+  In any case, the average ratio of capital to risk-weighted assets in the US is above 14%. This is true of all the “too big to fail banks” as well. You can find this number if you’re curious by looking at the
+  <a href="https://www.ffiec.gov/npw/Institution/TopHoldings" rel="noopener" target="_blank">
+   FR Y-9C report for each major institution
+  </a>
+  on schedule HC-R Part I line item 43.
+ </p>
+ <p>
+  <img alt="equity risk weighted assets" class="alignnone size-full wp-image-29177" data-attachment-id="29177" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="equity risk weighted assets" data-large-file="https://putanumonit.files.wordpress.com/2018/12/equity-risk-weighted-assets.png?w=900" data-medium-file="https://putanumonit.files.wordpress.com/2018/12/equity-risk-weighted-assets.png?w=300" data-orig-file="https://putanumonit.files.wordpress.com/2018/12/equity-risk-weighted-assets.png" data-orig-size="1444,529" data-permalink="https://putanumonit.com/2018/12/14/defense-of-finance/equity-risk-weighted-assets/" sizes="(max-width: 900px) 100vw, 900px" src="https://putanumonit.files.wordpress.com/2018/12/equity-risk-weighted-assets.png?w=900" srcset="https://putanumonit.files.wordpress.com/2018/12/equity-risk-weighted-assets.png?w=900 900w, https://putanumonit.files.wordpress.com/2018/12/equity-risk-weighted-assets.png?w=150 150w, https://putanumonit.files.wordpress.com/2018/12/equity-risk-weighted-assets.png?w=300 300w, https://putanumonit.files.wordpress.com/2018/12/equity-risk-weighted-assets.png?w=768 768w, https://putanumonit.files.wordpress.com/2018/12/equity-risk-weighted-assets.png?w=1024 1024w, https://putanumonit.files.wordpress.com/2018/12/equity-risk-weighted-assets.png 1444w"/>
+ </p>
+ <p>
+  Cochrane concludes:
+ </p>
+ <blockquote>
+  <p>
+   This simple truth has been met by howls of protest and layers of obfuscation and derision by bankers, their consultants and many of their regulators. “Oh, you just don’t understand the complexities of banking” is the basic attitude.
+  </p>
+ </blockquote>
+ <p>
+  I’m sure that professor Cochrane understands very well the
+  <i>
+   complexities
+  </i>
+  of banking. I’m just afraid he doesn’t understand the
+  <i>
+   simplicities
+  </i>
+  , such as how to look up a bank’s capital ratio online.
+ </p>
+ <p>
+  Ok, so maybe Cochrane misrepresents the views of Admati and Hellwig, and maybe those have changed since early 2013. I was excited to find out that a few weeks ago
+  <a href="http://www.econtalk.org/anat-admati-on-the-financial-crisis-of-2008/#audio-highlights" rel="noopener" target="_blank">
+   Dr. Admati went on EconTalk
+  </a>
+  to chat with Russ Roberts, a careful thinker, skeptical interviewer, and, of course, a professor of economics.
+ </p>
+ <blockquote>
+  <p>
+   <strong>
+    Anat Admati:
+   </strong>
+   But what I see, I see the symptom of heavy indebted and distressed: there’s no companies as indebted as banks. I mean, they have single-digit equity in a good day, relative to total assets.
+  </p>
+ </blockquote>
+ <p>
+  I agree that 11.2% isn’t a
+  <i>
+   very
+  </i>
+  double-digit number, but it’s still a double-digit number.
+ </p>
+ <blockquote>
+  <p>
+   <strong>
+    Anat Admati:
+   </strong>
+   They will have the story, ‘Yeah, yeah, yeah–we didn’t have enough equity and we figured that out and now we have more.’ But, I mean, the ‘more’ is like the smallest tweaks–it means nothing. The ‘more’ is like in Martin Wolf’s world, tripling zero. Which is still zero.
+  </p>
+ </blockquote>
+ <p>
+  In the space of 15 minutes, we went from “single-digit” to “basically zero”. I’m sure Russ will call her out on that.
+ </p>
+ <blockquote>
+  <p>
+   <strong>
+    Russ Roberts:
+   </strong>
+   That, of course, encourages banks to be very leveraged, to have very little skin in the game; as you point out, to have, say 1% in equity and 99% borrowed.
+  </p>
+ </blockquote>
+ <p>
+  <img alt="giphy" class="alignnone size-full wp-image-29178" data-attachment-id="29178" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="giphy" data-large-file="https://putanumonit.files.wordpress.com/2018/12/giphy.gif?w=440" data-medium-file="https://putanumonit.files.wordpress.com/2018/12/giphy.gif?w=300" data-orig-file="https://putanumonit.files.wordpress.com/2018/12/giphy.gif" data-orig-size="440,220" data-permalink="https://putanumonit.com/2018/12/14/defense-of-finance/giphy/" src="https://putanumonit.files.wordpress.com/2018/12/giphy.gif?w=900"/>
+ </p>
+ <p>
+  Maybe there’s an upside. If all those econ professors really think that banks have a 1% or 3% equity ratio then it’s sensible to say that raising that number to 7% or 10% will ameliorate a lot of risk in the banking system. Unfortunately, in contradiction to all logic, the lower someone thinks current ratios are they higher they think they should be. Admati and Hellwig propose 20%-30% and mention the good old days when banks had 50% equity.
+  <a href="https://johnhcochrane.blogspot.com/2013/03/the-bankers-new-clothes-review.html" rel="noopener" target="_blank">
+   Cochrane thinks
+  </a>
+  we should go to 50% or 100%. And Roberts:
+ </p>
+ <blockquote>
+  <p>
+   <strong>
+    Russ Roberts:
+   </strong>
+   Right. Because we can’t just–it was too risky. So, that incentive is going to always be there when powerful people have a chance to be bailed out. They are going to get bailed out. So, it seems to me that those of us who understand those incentives should call out and say: ‘Well, given this reality, the only way to deal with this is to have very low levels of leverage; very high levels of equity.’ Which is what you’ve come out for.
+  </p>
+  <p>
+   <strong>
+    Anat Admati:
+   </strong>
+   Yep.
+  </p>
+  <p>
+   <strong>
+    Russ Roberts:
+   </strong>
+   Now, that, to me, you can debate–and I know you have–whether that’s got a cost or not. I don’t really care. The cost of it is small compared to the costs of the ongoing failures of the financial system that happen.
+  </p>
+ </blockquote>
+ <p>
+  If I had to summarize the main lesson of 400 hours of EconTalk episodes in 4 words, they would be “everything is a trade-off”. When Roberts says “I don’t care about the costs” without thinking for even three seconds what those costs may be… there’s something about this topic that seems to incinerate the sanity of anyone who approaches it.
+ </p>
+ <p>
+  So what are the costs of making banks hold more capital? Let’s put a number on it.
+ </p>
+ <p>
+  Let’s start with a simple model: a bank has $10 of
+  <i>
+   equity,
+  </i>
+  it borrows $90 of deposits (
+  <i>
+   liabilities
+  </i>
+  ) at 2%, it and lends out $100 (
+  <i>
+   assets)
+  </i>
+  at 5% for a 10% equity-to-assets ratio. You can review
+  <a href="https://en.wikipedia.org/wiki/Accounting_equation" rel="noopener" target="_blank">
+   the basic accounting equation
+  </a>
+  if you’re not familiar with the terminology. Let’s say that the bank has operational costs that are 1% of assets (the cost actually doing the work of taking deposits and making loans) and that 1% of the bank’s debtors don’t repay their loans.
+ </p>
+ <p>
+  We can calculate how much money the bank makes.
+ </p>
+ <p>
+  Costs: 1%*$100 operational costs + 1%*$100 borrower defaults + 2%*$90 interest paid = 1 + 1 + 1.8 =
+  <span style="color:#993300;">
+   $3.8
+  </span>
+  .
+ </p>
+ <p>
+  Revenues: 5%*$99 interest received =
+  <span style="color:#993300;">
+   $4.95
+  </span>
+  .
+ </p>
+ <p>
+  Total profit: 4.95 – 3.8 =
+  <span style="color:#993300;">
+   $1.15
+  </span>
+  of profit on $10 of equity. That means that every dollar of bank equity earns
+  <span style="color:#993300;">
+   11.5%
+  </span>
+  return each year, which is in line with most other industries.
+ </p>
+ <p>
+  What would happen if a bank had to hold $50 in equity and take only $50 in deposits to cover $100 in loans?
+ </p>
+ <p>
+  Costs: 1%*$100 + 1%*$100 + 2%*$50 = 1 + 1 + 1 = $3.
+ </p>
+ <p>
+  Revenues: $4.95.
+ </p>
+ <p>
+  The bank made a profit of $1.95, but that profit is divided among a lot more shareholders. Each dollar of equity has earned only 1.95 / 50 =
+  <span style="color:#993300;">
+   3.9%
+  </span>
+  . This is a measly return, 3 times less than what shareholders were earning with a 10% equity ratio.
+ </p>
+ <p id="bfoot2">
+  Perhaps shareholders will take a slightly lower return in exchange for a safer investment, but they wouldn’t take one-third. To get back a reasonable return on equity, instead of borrowing at 2% and lending at 5% banks might have to borrow at 1% and lend at 8%. Of course, there are a lot fewer borrowers and lenders willing to make that deal. A lot of lending will not get done: companies won’t get started
+  <a href="#foot2">
+   [2]
+  </a>
+  , houses won’t get bought, investor cash will remain stuffed in mattresses.
+ </p>
+ <p>
+  In fact, that’s what
+  <i>
+   will
+  </i>
+  happen if capital requirements are raised. Equity investors will pull their money out of banks and into more profitable enterprises like
+  <a href="https://putanumonit.com/2017/02/10/get-rich-slowly/" rel="noopener" target="_blank">
+   apple polishing
+  </a>
+  . Most banks will shut down, and the remainder will serve the greatly reduced loan intermediation market. In the good ol’ days of 50% equity ratios, even white people had a tough time getting a mortgage.
+ </p>
+ <p>
+  The argument
+  <i>
+   for
+  </i>
+  capital requirements is that banks holding too little equity impose a negative externality on everyone else in the form of systemic risk from banks blowing up. This argument
+  <a href="https://www.sciencedirect.com/science/article/pii/S1572308917302632" rel="noopener" target="_blank">
+   runs into the puzzle
+  </a>
+  of banks holding 6-7% more capital than is required of them, but it’s probably correct as a general principle.
+ </p>
+ <p>
+  Ideally, then, regulations should set capital requirement at the point they would be if that externality was entirely internalized by the banks. That’s what the 8% number is aiming to do. It’s physically impossible to make bankers have 100% skin in the game and still do banking, so the regulations aim to set limits that would make banks behave
+  <i>
+   as if
+  </i>
+  that was the case.
+ </p>
+ <p>
+  Of course, everyone “knows” that regulations are a scam. Admati and Hellwig promulgate the idea that corrupt regulators go easy on banks in order to get a cushy job in the industry. From Cochrane’s review:
+ </p>
+ <blockquote>
+  <p>
+   And, in an all-too-short chapter on “The Politics of Banking,” they show us how politicians and regulators like the cozy cronyism of the current system. […] Regulators commonly become sympathetic to the interests of the industry they regulate, which advances their careers in government or back in industry.
+  </p>
+ </blockquote>
+ <p>
+  Unfortunately for this story, research shows that
+  <i>
+   tougher
+  </i>
+  regulators
+  <a href="https://academic.oup.com/qje/article-abstract/129/2/889/1867167" rel="noopener" target="_blank">
+   have an easier time
+  </a>
+  getting jobs in finance than regulators who go easy on banks. Think about it: if you’re a bank, would you hire the diligent and exacting Fed employees, or the lazy and careless?
+ </p>
+ <p>
+  On EconTalk, regulation is simply dismissed out of hand:
+ </p>
+ <blockquote>
+  <p>
+   <strong>
+    Anat Admati:
+   </strong>
+   I think that Basel, the way it was coming into the crisis was a
+   <i>
+    spectacular
+   </i>
+   failure. And I can just tell you how many things were wrong with it. And that what they called a ‘major revision’ was really just tightening a few screws. But it really didn’t improve it that much. And it remains this game of, you know, of playing around with the risk weights and finding ways to increase, you know, to kind of game it; and this whole thing; and putting it off balance sheet; and what’s called Regulatory Arbitrage–this cat-and-mouse game that continues to go.
+  </p>
+  <p>
+   […]
+  </p>
+  <p>
+   <strong>
+    Russ Roberts:
+   </strong>
+   How much Triple A, and weights, and how much of each kind you can have. And that whole hierarchy of, that infrastructure of supervision, monitoring, regulation, and implicit promise seems to me to be an utter failure. There’s no reason to think that that’s a good system.
+  </p>
+ </blockquote>
+ <p>
+  I know more about the hierarchy of supervision, monitoring, and regulation than all but perhaps a hundred people in the United States. Almost all of those people, including me, are making their money by helping banks comply with the rules in letter and in spirit rather than by helping them evade the rules and play games. The reason is simple:
+  <i>
+   there are too many goddamn rules to evade them all.
+  </i>
+ </p>
+ <p>
+  Aside from requirements on the amount of capital a bank must hold, here are just the regulations that I’ve dealt with in the last five years:
+ </p>
+ <ul>
+  <li>
+   <a href="https://www.ecfr.gov/cgi-bin/text-idx?SID=3707cc5281d649a29ed64ff333cf6156&amp;mc=true&amp;tpl=/ecfrbrowse/Title12/12cfr249_main_02.tpl" rel="noopener" target="_blank">
+    Liquidity coverage ratios
+   </a>
+   , ensuring that banks have enough cash flow to pay their short-term debts even in a liquidity crunch.
+  </li>
+  <li>
+   <a href="https://www.federalregister.gov/documents/2018/08/06/2018-16133/single-counterparty-credit-limits-for-bank-holding-companies-and-foreign-banking-organizations" rel="noopener" target="_blank">
+    Single-counterparty credit limits
+   </a>
+   , ensuring that no bank is overly exposed to a single institution that will drag it down if it fails.
+  </li>
+  <li>
+   <a href="https://www.axiomsl.com/resource-center/inside-view/2017/09/12/are-you-ready-for-fdic-part-370/" rel="noopener" target="_blank">
+    FDIC 370
+   </a>
+   , ensuring that even if a depository institution fails it will repay all of its deposits immediately.
+  </li>
+  <li>
+   Net stable founding ratio, country exposure reporting, stress tests, special rules for insurance companies, for broker-dealers, for funds, for swaps, for qualified financial contracts…
+  </li>
+ </ul>
+ <p>
+  The last thing I’m worried about is that I’ll be out of a job because regulators decide to give banks a break.
+ </p>
+ <p>
+  There is really just one glaring problem with government regulation of banks – it’s
+  <i>
+   too nice to the government
+  </i>
+  . The US government decreed that US treasuries have a risk-weight of 0%, that they’re considered a highly liquid asset on par with cash, that the government is exempt from single-counterparty limits, and so on and so forth. Every major European and Asian regulator does the same. The only way banks can comply with all the regulations is by being massively exposed to government debt in all its forms. Did I mention conjoined twins?
+ </p>
+ <p>
+  If nations and taxpayers bear the burden of bank risk, banks are no less exposed to government risk. Governments print the money, banks move it around, and if you find this arrangement distasteful consider that it has underpinned the global economy since long before the industrial revolution.
+ </p>
+ <h2>
+  Conclusion
+ </h2>
+ <p>
+  To wrap up:
+ </p>
+ <ul>
+  <li>
+   The financial industry moves money between those who have it to those who have a good use for it, which makes everything possible from tortillas to tortoise toys.
+  </li>
+  <li>
+   Moving around debts is risky if you can end up holding the wrong end of it, and it’s impossible to fully control or eliminate those risks.
+  </li>
+  <li>
+   Regulations do some of it, but they’ll never eliminate the possibility of crises.
+  </li>
+  <li>
+   Making banks hold 100% equity will eliminate the risk in the financial system by eliminating the financial system.
+  </li>
+  <li>
+   Governments and finance have been intertwined since both were born in their modern form. It’s hard to tell whether this is a feature, a bug, or a law of nature. I lean towards the latter.
+  </li>
+ </ul>
+ <p>
+  If you think it’s easy to design an alternative financial system without banks or the governments by repeating the word “blockchain” a lot,
+  <a href="https://putanumonit.com/2018/01/21/jacobcoin/" rel="noopener" target="_blank">
+   I have some Jacobcoin to sell you
+  </a>
+  . And if you think it’s easy to fix the system by replacing the carefully crafted system of financial regulation and oversight with a 50% capital requirement and a ban on bailouts, you’re almost certainly an economics professor, and you’re almost certainly wrong.
+ </p>
+ <hr/>
+ <p id="foot1">
+  [1] The top earners in finance do make a lot of money, but the average “banker” doesn’t. Median hourly wage in the finance and insurance sector is
+  <a href="https://www.bls.gov/oes/current/naics2_52.htm" rel="noopener" target="_blank">
+   $25.10
+  </a>
+  , compared to
+  <a href="https://www.bls.gov/oes/current/naics2_54.htm" rel="noopener" target="_blank">
+   $31.43
+  </a>
+  in “Professional, Scientific, and Technical Services” or
+  <a href="https://www.bls.gov/oes/current/naics2_51.htm" rel="noopener" target="_blank">
+   $29.51
+  </a>
+  in information and communications. The financial industry is made up of a lot of average people earning an average salary putting in honest effort into average spreadsheets.
+ </p>
+ <p>
+  <a href="#bfoot1">
+   [Back]
+  </a>
+ </p>
+ <p id="foot2">
+  [2] Early on in FedEx’s history, its founder needed $27,000 to fuel the planes and save the business from bankruptcy. After failing to get just one more bank loan,
+  <a href="https://www.huffingtonpost.com/2012/10/15/fred-smith-blackjack-fedex_n_1966837.html" rel="noopener" target="_blank">
+   he flew to Vegas with his last $5000
+  </a>
+  and miraculously made enough to save the company, pioneer overnight shipping, and make things like Amazon Prime possible for millions of people. Somewhere a great company is closing its doors because the bank that would give it the loan is running up against its capital limits.
+ </p>
+ <p>
+  <a href="#bfoot2">
+   [Back]
+  </a>
+ </p>
+ <div class="sharedaddy sd-like-enabled sd-sharing-enabled" id="jp-post-flair">
+  <div class="sharedaddy sd-sharing-enabled">
+   <div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing">
+    <h3 class="sd-title">
+     Share this:
+    </h3>
+    <div class="sd-content">
+     <ul>
+      <li class="share-facebook">
+       <a class="share-facebook sd-button share-icon no-text" data-shared="sharing-facebook-29151" href="https://putanumonit.com/2018/12/14/defense-of-finance/?share=facebook" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Facebook">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Facebook (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-twitter">
+       <a class="share-twitter sd-button share-icon no-text" data-shared="sharing-twitter-29151" href="https://putanumonit.com/2018/12/14/defense-of-finance/?share=twitter" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Twitter">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Twitter (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-pocket">
+       <a class="share-pocket sd-button share-icon no-text" data-shared="" href="https://putanumonit.com/2018/12/14/defense-of-finance/?share=pocket" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Pocket">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Pocket (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-reddit">
+       <a class="share-reddit sd-button share-icon no-text" data-shared="" href="https://putanumonit.com/2018/12/14/defense-of-finance/?share=reddit" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Reddit">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Reddit (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-tumblr">
+       <a class="share-tumblr sd-button share-icon no-text" data-shared="" href="https://putanumonit.com/2018/12/14/defense-of-finance/?share=tumblr" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Tumblr">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Tumblr (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-email">
+       <a class="share-email sd-button share-icon no-text" data-shared="" href="https://putanumonit.com/2018/12/14/defense-of-finance/?share=email" rel="nofollow noopener noreferrer" target="_blank" title="Click to email this to a friend">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to email this to a friend (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-end">
+      </li>
+     </ul>
+    </div>
+   </div>
+  </div>
+  <div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded" data-name="like-post-frame-101823629-29151-6010a2faa7cb9" data-src="//widgets.wp.com/likes/index.html?ver=20200826#blog_id=101823629&amp;post_id=29151&amp;origin=putanumonit.wordpress.com&amp;obj_id=101823629-29151-6010a2faa7cb9&amp;domain=putanumonit.com" id="like-post-wrapper-101823629-29151-6010a2faa7cb9">
+   <h3 class="sd-title">
+    Like this:
+   </h3>
+   <div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px;">
+    <span class="button">
+     <span>
+      Like
+     </span>
+    </span>
+    <span class="loading">
+     Loading...
+    </span>
+   </div>
+   <span class="sd-text-color">
+   </span>
+   <a class="sd-link-color">
+   </a>
+  </div>
+  <div class="jp-relatedposts" id="jp-relatedposts">
+   <h3 class="jp-relatedposts-headline">
+    <em>
+     Related
+    </em>
+   </h3>
+  </div>
+ </div>
+</div>

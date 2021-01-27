@@ -1,0 +1,645 @@
+<h1>
+<meta charset="utf-8">
+ Footballinear Socceregression
+</h1>
+<h2>
+</h2>
+<i>
+ Published November 20, 2015 on Put A Number On It!.
+</i>
+<div class="entry-content">
+ <p>
+  <em>
+   This is part 2 of a series about the statistics of global soccer performance,
+   <span style="color:#339966;">
+    <a href="https://putanumonit.com/2015/11/10/003-soccer1/" style="color:#339966;" target="_blank">
+     part 1 is here
+    </a>
+   </span>
+   .
+  </em>
+ </p>
+ <hr/>
+ <h4>
+  A Picture with a Thousand Words on It
+ </h4>
+ <p>
+  The point of this week’s post was to get to this chart, showing how good each country is at soccer independent of population and region of the world:
+ </p>
+ <p>
+  <a href="https://putanumonit.files.wordpress.com/2015/11/socaff3-region.png" target="_blank">
+   <img alt="SocAff3 region" class="alignnone size-thumbnail wp-image-132" height="107" loading="lazy" sizes="(max-width: 150px) 100vw, 150px" src="https://putanumonit.files.wordpress.com/2015/11/socaff3-region.png?w=150&amp;h=107" srcset="https://putanumonit.files.wordpress.com/2015/11/socaff3-region.png?w=150&amp;h=107 150w, https://putanumonit.files.wordpress.com/2015/11/socaff3-region.png?w=300&amp;h=214 300w" width="150"/>
+  </a>
+ </p>
+ <p>
+  You are encouraged to stare at it until the names blur and Denmark tangoes with Costa Rica across your retinas. It is either the best or the worst chart I have ever concocted, it took forever and gave me a migraine. Here’s the story of how I got to it.
+ </p>
+ <hr/>
+ <h4>
+  Correlation Does not Imply India
+ </h4>
+ <p>
+  <span style="color:#339966;">
+   <a href="https://putanumonit.com/2015/11/10/003-soccer1/" style="color:#339966;" target="_blank">
+    Last week
+   </a>
+  </span>
+  we explored the puzzle of the Chinese national soccer team sucking. Naive calculations showed why it’s surprising that there aren’t 11 players out of 1.3 billion Chinese (or 1.2 billion Indians) that can compete with Iceland. Iceland has 300,000 people and is made of ice
+  <em>
+   (citation needed)
+  </em>
+  which is hard to play soccer on. A better understanding of how the normal distribution works at the extreme tails demonstrated that country population should have a limited effect on national team success. Exactly how limited is that effect in the real world?
+ </p>
+ <p>
+  The nefarious mob that organizes global soccer is FIFA, which, for being a
+  <span style="color:#339966;">
+   <a href="http://longform.org/posts/the-longform-guide-to-soccer-corruption" style="color:#339966;" target="_blank">
+    corrupt cabal of callous criminals
+   </a>
+  </span>
+  , keeps a surprisingly
+  <span style="color:#339966;">
+   <a href="http://www.fifa.com/fifa-world-ranking/ranking-table/men/rank=207/index.html" style="color:#339966;" target="_blank">
+    neat database
+   </a>
+  </span>
+  of scores and rankings. Each team accumulates a score based on their result in every game played, the magnitude of the stage and the  strength of the opponent. I added up each nation’s scores for the last 11 years (2005-2015) to smooth out fluctuations.
+ </p>
+ <p>
+  1. Spain – 6930 points
+ </p>
+ <p>
+  2. Germany – 6401
+ </p>
+ <p>
+  3. Argentina – 5860
+ </p>
+ <p>
+  6. Brazil – 5808
+ </p>
+ <p>
+  22. USA – 4158
+ </p>
+ <p>
+  65. Cape Verde Islands – 2661
+ </p>
+ <p>
+  85. China – 2112
+ </p>
+ <p>
+  152. Liechtenstein – 901
+ </p>
+ <p>
+  154. India – 887 , with a population of 34,000 Liechtensteins.
+ </p>
+ <figure aria-describedby="caption-attachment-261" class="wp-caption alignnone" data-shortcode="caption" id="attachment_261" style="width: 310px">
+  <img alt="Flag-Pins-India-Liechtenstein" class="alignnone size-medium wp-image-261" data-attachment-id="261" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="Flag-Pins-India-Liechtenstein" data-large-file="https://putanumonit.files.wordpress.com/2015/11/flag-pins-india-liechtenstein.jpg?w=400" data-medium-file="https://putanumonit.files.wordpress.com/2015/11/flag-pins-india-liechtenstein.jpg?w=300" data-orig-file="https://putanumonit.files.wordpress.com/2015/11/flag-pins-india-liechtenstein.jpg" data-orig-size="400,320" data-permalink="https://putanumonit.com/2015/11/20/005-soccer2/flag-pins-india-liechtenstein/" height="240" loading="lazy" sizes="(max-width: 300px) 100vw, 300px" src="https://putanumonit.files.wordpress.com/2015/11/flag-pins-india-liechtenstein.jpg?w=300&amp;h=240" srcset="https://putanumonit.files.wordpress.com/2015/11/flag-pins-india-liechtenstein.jpg?w=300&amp;h=240 300w, https://putanumonit.files.wordpress.com/2015/11/flag-pins-india-liechtenstein.jpg?w=150&amp;h=120 150w, https://putanumonit.files.wordpress.com/2015/11/flag-pins-india-liechtenstein.jpg 400w" width="300"/>
+  <figcaption class="wp-caption-text" id="caption-attachment-261">
+   Flag of Liechtensteindia
+  </figcaption>
+ </figure>
+ <p>
+  I pulled demographics numbers from the
+  <span style="color:#339966;">
+   <a href="http://unstats.un.org/unsd/demographic/products/dyb/dyb2011.htm" style="color:#339966;" target="_blank">
+    UN’s yearbook
+   </a>
+  </span>
+  and painstakingly calculated just the population of men aged 15-40 for soccer team purposes since some countries skew much younger/maler than others.
+ </p>
+ <p>
+  There are 209 soccer associations in the world (each has an equal vote in FIFA elections regardless of population or contribution, which means bribing the Tahiti delegate gets you as many votes as the USA one, which is how
+  <span style="color:#008000;">
+   <a href="http://time.com/2822288/qatar-world-cup-bribery/" style="color:#008000;" target="_blank">
+    Qatar hosts the 2022 world cup
+   </a>
+  </span>
+  ). I cut the bottom ranked 42 nations from consideration because there wasn’t good ranking or population data on most of them. Sincere apologies to my devoted readers in Guinea-Bissau, you just missed the cut of countries I care about.
+ </p>
+ <p>
+  Here’s a chart of country populations and cumulative soccer points:
+ </p>
+ <p>
+  <img alt="soccer fake regression" class="alignnone size-full wp-image-346" data-attachment-id="346" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="soccer fake regression" data-large-file="https://putanumonit.files.wordpress.com/2015/11/soccer-fake-regression.png?w=900" data-medium-file="https://putanumonit.files.wordpress.com/2015/11/soccer-fake-regression.png?w=300" data-orig-file="https://putanumonit.files.wordpress.com/2015/11/soccer-fake-regression.png" data-orig-size="1200,857" data-permalink="https://putanumonit.com/2015/11/20/005-soccer2/soccer-fake-regression/" sizes="(max-width: 900px) 100vw, 900px" src="https://putanumonit.files.wordpress.com/2015/11/soccer-fake-regression.png?w=900" srcset="https://putanumonit.files.wordpress.com/2015/11/soccer-fake-regression.png?w=900 900w, https://putanumonit.files.wordpress.com/2015/11/soccer-fake-regression.png?w=150 150w, https://putanumonit.files.wordpress.com/2015/11/soccer-fake-regression.png?w=300 300w, https://putanumonit.files.wordpress.com/2015/11/soccer-fake-regression.png?w=768 768w, https://putanumonit.files.wordpress.com/2015/11/soccer-fake-regression.png?w=1024 1024w, https://putanumonit.files.wordpress.com/2015/11/soccer-fake-regression.png 1200w"/>
+ </p>
+ <p>
+  The blue line is the regression between points and population, it shows a slight positive connection. Except that it’s a fake. The regression includes 165 countries but leaves out India and China. Since my goal is to use math to figure out why India and China suck at soccer, I can’t just shout “outliers!” and ignore them. If all 167 countries are included, the correlation between population and soccer rating is an astonishing
+  <span style="color:#0000ff;">
+   <strong>
+    -0.002
+   </strong>
+  </span>
+  , a perfectly flat line.
+ </p>
+ <p>
+  Correlation measures the tendency of two variables to move together, how much one goes up relative to its own average when the other one does. If two variables are completely independent from each other their
+  <em>
+   true
+  </em>
+  <em>
+   correlation
+  </em>
+  is 0, but if you just simulate 167 values of two independent variables you’ll measure a sample correlation of about 0.05 due to random noise. That tiny noise correlation is
+  <strong>
+   25 times
+  </strong>
+  <strong>
+   stronger
+  </strong>
+  than what we got for population and soccer! The only field that has correlations this small is astrology.
+ </p>
+ <p>
+  What is going on here?
+ </p>
+ <hr/>
+ <p>
+  <span style="color:#993300;">
+   <strong>
+    Hold on, I’m confused about this correlation/regression business.
+   </strong>
+  </span>
+ </p>
+ <p>
+  <span style="color:#993300;">
+   Then this little section is for you! If you know what those are, move right along.
+  </span>
+ </p>
+ <p>
+  <span style="color:#993300;">
+   <img alt="regression mpg" class="alignnone size-medium wp-image-496" data-attachment-id="496" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="regression mpg" data-large-file="https://putanumonit.files.wordpress.com/2015/11/regression-mpg.png?w=800" data-medium-file="https://putanumonit.files.wordpress.com/2015/11/regression-mpg.png?w=300" data-orig-file="https://putanumonit.files.wordpress.com/2015/11/regression-mpg.png" data-orig-size="800,600" data-permalink="https://putanumonit.com/2015/11/20/005-soccer2/regression-mpg/" height="225" loading="lazy" sizes="(max-width: 300px) 100vw, 300px" src="https://putanumonit.files.wordpress.com/2015/11/regression-mpg.png?w=300&amp;h=225" srcset="https://putanumonit.files.wordpress.com/2015/11/regression-mpg.png?w=300&amp;h=225 300w, https://putanumonit.files.wordpress.com/2015/11/regression-mpg.png?w=600&amp;h=450 600w, https://putanumonit.files.wordpress.com/2015/11/regression-mpg.png?w=150&amp;h=113 150w" width="300"/>
+  </span>
+ </p>
+ <p>
+  <span style="color:#993300;">
+   <strong>
+    Correlation
+   </strong>
+   tells you if things generally move in the same
+   <strong>
+    direction
+   </strong>
+   (+1), in opposite directions (-1) or somewhere in the middle. For example, fuel economy for cars has a negative correlation with weight, maybe -0.7. This means that in general, heavier cars are likely to burn through more fuel.
+  </span>
+ </p>
+ <p>
+  <span style="color:#993300;">
+   <strong>
+    Regression
+   </strong>
+   measures the
+   <strong>
+    magnitude
+   </strong>
+   of the correlation in the units that each variable is measured in. For example, the regression coefficient of car MPG on weight in pounds is -0.01 MPG/lb. The means that every pound added to the weight of a car comes with a 0.01 lower MPG on average, 500 pounds shave off 5 MPG.
+  </span>
+ </p>
+ <p>
+  <span style="color:#993300;">
+   <strong>
+    Multiple regression
+   </strong>
+   measures regression for more than one variable at a time,
+   <strong>
+    holding the
+   </strong>
+   <strong>
+    others constant
+   </strong>
+   . Let’s say we see that MPG is lower for heavier cars and for those with larger engines.  Multiple regression will tell you that adding 500 pounds by itself only subtracts 3 MPG when
+   <strong>
+    engine size is held constant
+   </strong>
+   , the other 2 MPG are simply due to heavier cars usually coming with larger engines which hurt fuel economy by themselves. Adding variables (like engine size) can completely change the size and even the sign of all other regression coefficients. Multiple regression also identifies variables that are
+   <strong>
+    significant
+   </strong>
+   (do a good job of predicting the outcome) and
+   <strong>
+    insignificant
+   </strong>
+   (those that don’t add anything once the other variables are known).
+  </span>
+ </p>
+ <p>
+  <span style="color:#993300;">
+   Regression is the basic tool of a lot of statistical analysis, prediction and machine learning. This
+   <span style="color:#339966;">
+    <a href="https://www.coursera.org/course/regmods" style="color:#339966;" target="_blank">
+     Coursera class
+    </a>
+   </span>
+   is one of many good places to learn it.
+  </span>
+ </p>
+ <hr/>
+ <h4>
+  Six Corners of the World
+ </h4>
+ <p>
+  As y’all know,
+  <span style="color:#339966;">
+   <a href="https://xkcd.com/552/" style="color:#339966;" target="_blank">
+    correlation doesn’t imply causation
+   </a>
+  </span>
+  . What’s often forgotten is that lack of correlation doesn’t imply lack of causation either. Implication is just hard, man. A variable like population could have its effect on soccer rating perfectly cancelled out by other variables, so that when the other variables aren’t accounted for, the correlation is 0.
+ </p>
+ <p>
+  Here’s an illustration of how that can happen that you can explain to your 5 year old nephew:
+ </p>
+ <ul>
+  <li>
+   X = number of testicles a human has
+  </li>
+  <li>
+   Y = number of ovaries a human has
+  </li>
+  <li>
+   Z = number of testicles+ovaries
+  </li>
+ </ul>
+ <p>
+  If we measure across the human race, X and Z would have a correlation that’s very close to 0 since as X goes from 0 to 2 Z stays put at 2 for almost everyone. However, if you were born with 2 testicles, losing either or both of them will have an immediate and directly causal impact on your Z variable.
+ </p>
+ <p>
+  The average Qatari has 1.53 testicles and 0.47 ovaries, I still can’t get over that.
+ </p>
+ <p>
+  What’s the ovary to the testicles of country population? (This blog was an excuse to write that line). The first suspect is the region of the world. Asia has 6 of the world’s 10 largest countries, and also some of the ones least interested in soccer. FIFA divides all soccer federations into 6 regions that match geography with some weird exceptions: Europe (includes Israel and Kazakhstan), Asia (includes Australia), South America (only 10 countries), Rest of America (includes
+  <em>
+   America
+  </em>
+  ), Oceania (includes Atlantis and the Mermaid Kingdom) and Africa. Teams get points for playing often and against strong opponents, so it’s much easier for a European country to accumulate points than it is for New Zealand, which faces a sparse yearly schedule of Tongas and Vanuatus.
+ </p>
+ <p>
+  We can tease out the effect of population as independent of region by performing
+  <span style="color:#339966;">
+   <a href="http://onlinestatbook.com/2/regression/multiple_regression.html" style="color:#339966;" target="_blank">
+    multiple regression
+   </a>
+  </span>
+  with region as an added variable. The verdict is that Europe and South America have a much higher rating than the rest of the world, Asia and Oceania are lower. Holding region constant slightly increases the
+  <span style="color:#339966;">
+   <a href="https://www.youtube.com/watch?v=PJbjw3AVyFU" style="color:#339966;">
+    effect of population
+   </a>
+  </span>
+  because the low rating of China and India is now partially accounted for by the Asia region. However, it’s still
+  <span style="color:#339966;">
+   <a href="https://www.youtube.com/watch?v=PJbjw3AVyFU" style="color:#339966;" target="_blank">
+    insignificant
+   </a>
+  </span>
+  . Ovaries aren’t to blame.
+ </p>
+ <hr/>
+ <h4>
+  Predictive Slovakiness
+ </h4>
+ <p>
+  Regression measures
+  <em>
+   linear
+  </em>
+  effects, or the change in the effect (points) for a
+  <em>
+   fixed-size
+  </em>
+  change in causes. The effect of population is clearly not linear: adding a million people to a tiny country does much more than adding them to India. Instead of using whole population numbers, we’ll go back to
+  <span style="color:#339966;">
+   <a href="https://putanumonit.com/2015/11/10/003-soccer1/" style="color:#339966;" target="_blank">
+    last week
+   </a>
+   ‘
+  </span>
+  s normal distribution model in which population affects soccer level by pushing up the
+  <strong>
+   quality of the top players
+  </strong>
+  , as measured by their distance away from the average. To go from population size to top player level we’ll need to answer the following technical question:
+ </p>
+ <p>
+  <em>
+   How many standard deviations above the mean will the best 11 players out of a population of N be on average?
+  </em>
+ </p>
+ <p>
+  It’s possible to answer that question precisely, but I’ll use a good approximation instead: for a country of
+  <span style="color:#0000ff;">
+   N
+  </span>
+  people I used as the score the point that has
+  <span style="color:#0000ff;">
+   5/N
+  </span>
+  of the normal distribution above it. Slovakia has around
+  <span style="color:#0000ff;">
+   N=1,000,000
+  </span>
+  men in soccer-playing age. The level that each Slovakian has an exactly
+  <span style="color:#0000ff;">
+   5 in 1,000,000
+  </span>
+  chance of being better than is the level
+  <span style="color:#0000ff;">
+   4.43
+  </span>
+  standard deviations above the mean. I took that number (
+  <span style="color:#0000ff;">
+   4.43
+  </span>
+  ) as the best guess of the relative soccer level of the dudes that contributed to the Slovakian national team over the last decade.
+ </p>
+ <figure aria-describedby="caption-attachment-387" class="wp-caption alignnone" data-shortcode="caption" id="attachment_387" style="width: 634px">
+  <img alt="skrtel" class="alignnone size-full wp-image-387" data-attachment-id="387" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"\u00a9 AFP\/Getty Images","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="skrtel" data-large-file="https://putanumonit.files.wordpress.com/2015/11/skrtel.jpg?w=634" data-medium-file="https://putanumonit.files.wordpress.com/2015/11/skrtel.jpg?w=300" data-orig-file="https://putanumonit.files.wordpress.com/2015/11/skrtel.jpg" data-orig-size="634,447" data-permalink="https://putanumonit.com/2015/11/20/005-soccer2/skrtel/" sizes="(max-width: 634px) 100vw, 634px" src="https://putanumonit.files.wordpress.com/2015/11/skrtel.jpg?w=900" srcset="https://putanumonit.files.wordpress.com/2015/11/skrtel.jpg 634w, https://putanumonit.files.wordpress.com/2015/11/skrtel.jpg?w=150 150w, https://putanumonit.files.wordpress.com/2015/11/skrtel.jpg?w=300 300w"/>
+  <figcaption class="wp-caption-text" id="caption-attachment-387">
+   That’s the scariest of the Slovakian bunch, Martin Skrtel.
+  </figcaption>
+ </figure>
+ <p>
+  The justification for using that approximation as the measure of population effect is way too rigorous for most readers and way not rigorous enough for real mathematicians; It’s an interesting discussion if you’re into that kind of freaky stuff, but I’m relegating to another post.
+ </p>
+ <p>
+  We can add the population-expected soccer level as a new variable to the regression to see if it does a better job of explaining the rating of each country. With the soccer level added, actual population size is no longer significant with or without China and India. This means that we can predict a country’s rating pretty well using just the
+  <strong>
+   expected level
+  </strong>
+  and the
+  <strong>
+   region
+  </strong>
+  . Here are the regression coefficients, significant in bold:
+ </p>
+ <p>
+  <strong>
+   Intercept: -4748.
+  </strong>
+  Intercept is the starting point, it’s the expected rating of a country that has all the other variables set to 0.
+ </p>
+ <p>
+  <strong>
+   Population-expected level:
+   <span style="color:#0000ff;">
+    1474
+   </span>
+  </strong>
+  <br/>
+  Africa: 147
+  <br/>
+  Asia:-517
+  <br/>
+  <strong>
+   Europe 1529
+  </strong>
+  <br/>
+  North America: 508
+  <br/>
+  <strong>
+   South America: 1966
+  </strong>
+ </p>
+ <p>
+  The range of countries’ rating goes from 0-7000, the average score is 2440. Going one standard deviation up in the population-expected level is worth a huge boost of
+  <span style="color:#0000ff;">
+   1474
+  </span>
+  points, but one SD marks a big jump in population: from 10,000 to 600,000 people or from 600,000 to 90 million. Each region’s coefficient measures how many points an average a team from that region is better than Oceania. Europe and Latin America are good at soccer and everyone else isn’t.
+ </p>
+ <p>
+  The regression can be thought of a prediction, how good we can expect a country to be based just on the variables we look at: expected level of top players and region. The predicted score for a country is calculated by multiplying the coefficient of each variable by the country’s score on that variable.
+ </p>
+ <table>
+  <tbody>
+   <tr>
+    <td width="133">
+     <strong>
+      Variable
+     </strong>
+    </td>
+    <td width="90">
+     <strong>
+      Coefficient
+     </strong>
+    </td>
+    <td width="114">
+     <strong>
+      Slovakia’s Score
+     </strong>
+    </td>
+    <td width="120">
+     <strong>
+      Change in points
+     </strong>
+    </td>
+   </tr>
+   <tr>
+    <td width="133">
+     Intercept
+    </td>
+    <td width="90">
+     -4748
+    </td>
+    <td width="114">
+    </td>
+    <td width="120">
+     -4748
+    </td>
+   </tr>
+   <tr>
+    <td width="133">
+     Pop-expected level
+    </td>
+    <td width="90">
+     1474
+    </td>
+    <td width="114">
+     4.43
+    </td>
+    <td width="120">
+     6532
+    </td>
+   </tr>
+   <tr>
+    <td width="133">
+     Europe
+    </td>
+    <td width="90">
+     1529
+    </td>
+    <td width="114">
+     1
+    </td>
+    <td width="120">
+     1529
+    </td>
+   </tr>
+   <tr>
+    <td colspan="3" width="337">
+     <strong>
+      Total score expected from the regression:
+     </strong>
+    </td>
+    <td width="120">
+     <span style="color:#0000ff;">
+      <strong>
+       3313
+      </strong>
+     </span>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  For example, Slovakia starts from the intercept of -4748 points (like everybody), gets 1474 points for each of 4.43 population-levels and another 1529 points for being in Europe. This comes out to an
+  <strong>
+   expected score
+  </strong>
+  of
+  <span style="color:#0000ff;">
+   3,313
+  </span>
+  points. Their
+  <strong>
+   actual
+  </strong>
+  <strong>
+   rating
+  </strong>
+  is
+  <span style="color:#0000ff;">
+   3,566
+  </span>
+  , so it means that they outperform expectations by
+  <span style="color:#3366ff;">
+   250
+  </span>
+  points, those points come either from random luck or from some variables that we didn’t account for yet like the famous Slovakian warrior spirit. That’s good news, because otherwise Martin Skrtel would come and stomp on my face for disparaging his great footballing nation. 250 is also a pretty small prediction error compared to the total score, so the Slovariables do a good job of accounting for the Slovariance.
+ </p>
+ <p>
+  The chart I started with shows how good each country is relative to what we could expect from their region and size. Higher up countries outperform expectations (for reasons we don’t know yet) and those lower down disappoint:
+ </p>
+ <figure aria-describedby="caption-attachment-132" class="wp-caption alignnone" data-shortcode="caption" id="attachment_132" style="width: 1600px">
+  <a href="https://putanumonit.files.wordpress.com/2015/11/socaff3-region.png" target="_blank">
+   <img alt="SocAff3 region" class="alignnone size-full wp-image-132" data-attachment-id="132" data-comments-opened="1" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="SocAff3 region" data-large-file="https://putanumonit.files.wordpress.com/2015/11/socaff3-region.png?w=900" data-medium-file="https://putanumonit.files.wordpress.com/2015/11/socaff3-region.png?w=300" data-orig-file="https://putanumonit.files.wordpress.com/2015/11/socaff3-region.png" data-orig-size="1600,1143" data-permalink="https://putanumonit.com/2015/11/20/005-soccer2/socaff3-region/" sizes="(max-width: 900px) 100vw, 900px" src="https://putanumonit.files.wordpress.com/2015/11/socaff3-region.png?w=900" srcset="https://putanumonit.files.wordpress.com/2015/11/socaff3-region.png?w=900 900w, https://putanumonit.files.wordpress.com/2015/11/socaff3-region.png?w=150 150w, https://putanumonit.files.wordpress.com/2015/11/socaff3-region.png?w=300 300w, https://putanumonit.files.wordpress.com/2015/11/socaff3-region.png?w=768 768w, https://putanumonit.files.wordpress.com/2015/11/socaff3-region.png?w=1024 1024w, https://putanumonit.files.wordpress.com/2015/11/socaff3-region.png 1600w"/>
+  </a>
+  <figcaption class="wp-caption-text" id="caption-attachment-132">
+   <a href="https://putanumonit.files.wordpress.com/2015/11/socaff3-region.png" target="_blank">
+    Click for larger version
+   </a>
+  </figcaption>
+ </figure>
+ <p>
+  So much fascinating stuff! What do Switzerland and Costa Rica have in common besides being fairly good at soccer with medium populations? Iran and Mexico have similar populations, similar ratings and similar green-white-red uniforms; are they actually the same country? Why does the tiny island of Malta languish, and the tiny Cape Verde Islands kick ass? Is Qatar really  good or do they bribe game officials? What makes Spain and Germany kings of soccer in the 21st century? Wait,
+  <span style="color:#339966;">
+   <a href="http://www.amazon.com/Das-Reboot-German-Reinvented-Conquered/dp/1568585306" style="color:#339966;" target="_blank">
+    someone actually wrote an excellent book about the last one
+   </a>
+  </span>
+  .
+ </p>
+ <hr/>
+ <p>
+  All the answers (to life, not just soccer ability) are revealed in the riveting conclusion:
+  <span style="color:#008000;">
+   <a href="https://putanumonit.com/2015/12/01/006-soccer3/" style="color:#008000;">
+    The Rich, the Tall, and the Bees
+   </a>
+  </span>
+  .
+ </p>
+ <div class="sharedaddy sd-like-enabled sd-sharing-enabled" id="jp-post-flair">
+  <div class="sharedaddy sd-sharing-enabled">
+   <div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing">
+    <h3 class="sd-title">
+     Share this:
+    </h3>
+    <div class="sd-content">
+     <ul>
+      <li class="share-facebook">
+       <a class="share-facebook sd-button share-icon no-text" data-shared="sharing-facebook-131" href="https://putanumonit.com/2015/11/20/005-soccer2/?share=facebook" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Facebook">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Facebook (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-twitter">
+       <a class="share-twitter sd-button share-icon no-text" data-shared="sharing-twitter-131" href="https://putanumonit.com/2015/11/20/005-soccer2/?share=twitter" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Twitter">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Twitter (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-pocket">
+       <a class="share-pocket sd-button share-icon no-text" data-shared="" href="https://putanumonit.com/2015/11/20/005-soccer2/?share=pocket" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Pocket">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Pocket (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-reddit">
+       <a class="share-reddit sd-button share-icon no-text" data-shared="" href="https://putanumonit.com/2015/11/20/005-soccer2/?share=reddit" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Reddit">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Reddit (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-tumblr">
+       <a class="share-tumblr sd-button share-icon no-text" data-shared="" href="https://putanumonit.com/2015/11/20/005-soccer2/?share=tumblr" rel="nofollow noopener noreferrer" target="_blank" title="Click to share on Tumblr">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to share on Tumblr (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-email">
+       <a class="share-email sd-button share-icon no-text" data-shared="" href="https://putanumonit.com/2015/11/20/005-soccer2/?share=email" rel="nofollow noopener noreferrer" target="_blank" title="Click to email this to a friend">
+        <span>
+        </span>
+        <span class="sharing-screen-reader-text">
+         Click to email this to a friend (Opens in new window)
+        </span>
+       </a>
+      </li>
+      <li class="share-end">
+      </li>
+     </ul>
+    </div>
+   </div>
+  </div>
+  <div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded" data-name="like-post-frame-101823629-131-6010a95adfae8" data-src="//widgets.wp.com/likes/index.html?ver=20200826#blog_id=101823629&amp;post_id=131&amp;origin=putanumonit.wordpress.com&amp;obj_id=101823629-131-6010a95adfae8&amp;domain=putanumonit.com" id="like-post-wrapper-101823629-131-6010a95adfae8">
+   <h3 class="sd-title">
+    Like this:
+   </h3>
+   <div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px;">
+    <span class="button">
+     <span>
+      Like
+     </span>
+    </span>
+    <span class="loading">
+     Loading...
+    </span>
+   </div>
+   <span class="sd-text-color">
+   </span>
+   <a class="sd-link-color">
+   </a>
+  </div>
+  <div class="jp-relatedposts" id="jp-relatedposts">
+   <h3 class="jp-relatedposts-headline">
+    <em>
+     Related
+    </em>
+   </h3>
+  </div>
+ </div>
+</div>
